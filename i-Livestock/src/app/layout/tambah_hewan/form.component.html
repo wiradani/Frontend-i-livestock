@@ -1,0 +1,59 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Tambah Hewan'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <form role="form">
+                <fieldset class="form-group">
+                    <label>Jenis hewan</label>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Sapi
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Kambing
+                        </label>
+                    </div>
+                    
+                </fieldset>
+
+
+		<fieldset class="form-group">
+                    <label>Usia</label>
+                    <input class="form-control">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Bobot</label>
+		    <input class="form-control">
+                </fieldset>
+		
+		 <div class="form-group">
+                    <label>Status</label>
+                    <select class="form-control">
+                        <option>Sehat</option>
+                        <option>Sakit</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group">
+                    <label for="exampleInputFile">Avatar</label>
+                    <input type="file" class="form-control-file" id="exampleInputFile">
+                </fieldset>
+
+
+                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+
+            </form>
+
+        </div>
+     
+    <!-- /.row -->
+</div>

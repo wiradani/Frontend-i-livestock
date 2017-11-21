@@ -1,0 +1,133 @@
+
+<div [@routerTransition]>
+    <h2 class="text-muted">Qurban-me!</h2>
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+                    <div class="carousel-caption">
+                        <h3>{{slider.label}}</h3>
+                        <p>{{slider.text}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-primary'" [icon]="'fa-comments'" [count]="26" [label]="'Hewan yang dapat diqurbankan'" ></app-stat>
+	<a href="/jumlah_hewan" class="float-right card-inverse">
+            <span ><i class="fa fa-arrow-circle-right"></i></span>
+        </a>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-info'" [icon]="'fa-tasks'" [count]="12" [label]="'Hewan yang telah diqurbankan'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'Status hewan qurban'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-danger'" [icon]="'fa-support'" [count]="13" [label]="'Piechart hewan qurban'"></app-stat>
+        </div>
+
+    </div>
+    
+    <div class="row">
+        <div class="col col-xl-10 col-lg-12">
+            <div class="card mb-3">
+                <div class="card-header">Hewan yang dapat diqurbankan</div>
+                <div class="card-block table-responsive">
+                    <table class="table">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Usia</th>
+                            <th>Jenis</th>
+			    <th>Bobot</th>
+			    <th>Status</th>
+			    <th>Aksi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Sapi001</td>
+                            <td>2</td>
+                            <td>perah</td>
+			    <td>46</td>
+			    <td>sehat</td>
+			    <td>qurban!</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Sapi002</td>
+                            <td>3</td>
+                            <td>perah</td>
+			    <td>67</td>
+			    <td>sakit</td>
+			    <td>qurban!</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Sapi003</td>
+                            <td>4</td>
+                            <td>perah</td>
+			    <td>49</td>
+			    <td>sehat</td>
+			    <td>qurban!</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-header">Hewan yang telah diqurbankan</div>
+                <table class="card-block table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="table-active">
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr class="table-success">
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr class="table-info">
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
