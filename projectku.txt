@@ -1,0 +1,12 @@
+-PAKAN
+
+satuan kg
+ada notifikasi kalau pakan habis
+
+-USIA
+
+satuan bulan
+
+-BOBOT
+
+satuan kg
