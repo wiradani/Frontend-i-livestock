@@ -1,37 +1,40 @@
-
 <div [@routerTransition]>
     <h2 class="text-muted">Qurban-me!</h2>
-    <div class="row">
-        <div class="col-md-12">
-            <ngb-carousel>
-                <ng-template ngbSlide *ngFor="let slider of sliders">
-                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
-<!--                    <div class="carousel-caption">
-                        <h3>{{slider.label}}</h3>
-                        <p>{{slider.text}}</p>
-                    </div>
--->
-                </ng-template>
-            </ngb-carousel>
-        </div>
-    </div>
+    
     <hr>
-    <div class="row">
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'card-primary'" [icon]="'fa-comments'" [count]="26" [label]="'Hewan yang dapat diqurbankan'" ></app-stat>
-	<a href="/jumlah_hewan" class="float-right card-inverse">
-            <span ><i class="fa fa-arrow-circle-right"></i></span>
-        </a>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'card-info'" [icon]="'fa-tasks'" [count]="12" [label]="'Hewan yang telah diqurbankan'" ></app-stat>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'card-success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'Status hewan qurban'" ></app-stat>
-        </div>
-        <div class="col-xl-3 col-lg-6">
-            <app-stat [bgClass]="'card-danger'" [icon]="'fa-support'" [count]="13" [label]="'Piechart hewan qurban'"></app-stat>
-        </div>
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<div class="container">
+       <div class="row">
+          <div class="col-md-3">
+            <div class="square-service-block">
+               <a href="#">
+                 <div class="ssb-icon"><i class="fa fa-paint-brush" aria-hidden="true"></i></div>
+                 <h2 class="ssb-title">Hewan yang dapat dikurbankan</h2>  
+               </a>
+            </div>
+          </div>
+          
+          <div class="col-md-3">
+            <div class="square-service-block">
+               <a href="#">
+                 <div class="ssb-icon"> <i class="fa fa-globe" aria-hidden="true"></i> </div>
+                 <h2 class="ssb-title">Hewan yang telah dikurbankan</h2>  
+               </a>
+            </div>
+          </div>
+          
+          
+          <div class="col-md-3">
+            <div class="square-service-block">
+               <a href="#">
+                 <div class="ssb-icon"><i class="fa fa-font" aria-hidden="true"></i></div>
+                 <h2 class="ssb-title">Statistik hewan kurban</h2>  
+               </a>
+            </div>
+          </div>
+          
+
 
     </div>
     
