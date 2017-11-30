@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buku Tamu</title>
+  <link rel="stylesheet" type="text/css" href="/../css/bootstrap.min.css">
+  <script type="text/javascript" src="/../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><%=page_title%></div>
+      <div class="panel-body">
+        <form class="form-horizontal" role="form" method="post" action="/livestock/tambah">
+          <div class="form-group">
+            <label for="jenis" class="col-sm-2 control-label">Jenis Hewan</label>
+            <div class="col-sm-10">
+            <input type="text" name="jenis"  class="form-control" id="jenis" required maxlength="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="deskripsi" class="col-sm-2 control-label">Deskripsi Hewan</label>
+            <div class="col-sm-10">
+            <input type="text" name="deskripsi"  class="form-control" id="deskripsi" required maxlength="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="spesies" class="col-sm-2 control-label">Spesies Hewan</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="spesies"   id="spesies" required maxlength="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="usia" class="col-sm-2 control-label">Usia (Bulan)</label>
+            <div class="col-sm-10">
+            <input type="number" class="form-control" name="usia"   id="usia" required maxlength="5">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="berat" class="col-sm-2 control-label">Berat Badan (KG)</label>
+            <div class="col-sm-10">
+            <input type="number" class="form-control" name="berat"  id="berat" required maxlength="5">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="status" class="col-sm-2 control-label">Status Hewan</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="status"  id="status" required maxlength="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="kandang" class="col-sm-2 control-label">Kandang</label>
+            <div class="col-sm-10">
+            <input type="text" class="form-control" name="kandang"  id="kandang" required maxlength="50">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" value="Save">
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+  </body>

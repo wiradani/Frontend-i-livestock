@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>i-Livestock</title>
+    <link rel="stylesheet" type="text/css" href="/../css/bootstrap.min.css">
+    <script type="text/javascript" src="/../js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+  <h1>i-Livestock</h1>
+  <p><a class="btn btn-primary btn-lg" role="button" href="livestock/tambah">+ Tambah ternak</a></p>
+</div>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading"><%=page_title%></div>
+          <div class="panel-body">
+              <!-- Table -->
+
+              <table class="table">
+                <tr>
+                    <td>No.</td>
+                    <td>ID</td>
+                    <td>Jenis Hewan</td>
+                    <td>Deskripsi Hewan</td>
+                    <td>Spesies Hewan</td>
+                    <td>Usia (Bulan)</td>
+                    <td>Berat Badan (Kg)</td>
+                    <td>Status Hewan</td>
+                    <td>Kandang</td>
+                </tr>
+                <% if(data.length){ 
+
+                 for(var i = 0;i < data.length;i++) { %>
+
+                 <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].hewan_id%></td>
+                    <td><%=data[i].jenis_hewan%></td>
+                    <td><%=data[i].deskripsi_hewan%></td>
+                    <td><%=data[i].spesies_hewan%></td>
+                    <td><%=data[i].usia%></td>
+                    <td><%=data[i].berat_badan%></td>
+                    <td><%=data[i].status_hewan%></td>
+                    <td><%=data[i].FK_Kandang_id_kandang%></td>
+                    <td>
+                        <a class="btn btn-warning" href="../livestock/ubah/<%=data[i].hewan_id%>"><i class="glyphicon glyphicon-edit"></i> Ubah</a>
+
+                        <a class="btn btn-danger" href="../livestock/hapus/<%=data[i].hewan_id%>"><i class="glyphicon glyphicon-trash"></i> Hapus</a>
+
+                    </td>
+                </tr>
+                <% }
+
+            }else{ %>
+            <tr>
+                <td colspan="3">Tidak ada ternak</td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
+</div>
+</body>
+</html>
