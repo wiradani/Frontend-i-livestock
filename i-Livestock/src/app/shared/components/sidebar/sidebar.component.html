@@ -14,32 +14,32 @@
                 <ul class="submenu">
                     <li>
                         <a routerLink="/sapi" [routerLinkActive]="['router-link-active']" class="list-group-item">
-           	 <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Sapi' | translate }}
+           	 <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Sapi' | translate }}
         		</a>
                     </li>
                     <li>
                         <a routerLink="/kambing" [routerLinkActive]="['router-link-active']" class="list-group-item">
-           	 <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Kambing' | translate }}
+           	 <i class="fa fa-fw fa-table"></i>&nbsp;{{ 'Kambing' | translate }}
         		</a>
                     </li>
                 </ul>
             </li>
         </div>
         <a [routerLink]="['/jumlah_hewan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah hewan' | translate }}
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah Hewan' | translate }}
         </a>
 	<a [routerLink]="['/jumlah_pakan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah pakan' | translate }}
+            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah Pakan' | translate }}
         </a>
        	<a [routerLink]="['/tambah_hewan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Tambah Hewan' | translate }}
+            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Update Hewan' | translate }}
         </a>
-        
+        <!--
         <a [routerLink]="['/tentang_kami']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'Tentang Kami' | translate }}
         </a>
 	<a [routerLink]="['/bantuan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'Bantuan' | translate }}
-        </a>
+        </a>    -->
     </ul>
 </nav>

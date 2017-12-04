@@ -1,5 +1,5 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="'Tambah Hewan'" [icon]="'fa-edit'"></app-page-header>
+    <app-page-header [heading]="'Update Hewan'" [icon]="'fa-edit'"></app-page-header>
 
     <div class="row">
         <div class="col-lg-6">
@@ -7,49 +7,53 @@
             <form role="form">
                 <fieldset class="form-group">
                     <label>Jenis hewan</label>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked=""> Sapi
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Kambing
-                        </label>
-                    </div>
-                    
+                    <div class="form-group">
+  <label class="col-md-4 control-label" for="radios"></label>
+          <div class="col-md-4"> 
+            <label class="radio-inline" for="radios-0">
+              <input type="radio" name="radios" id="radios-0" value="1" checked="checked" />
+              Sapi
+            </label>
+            
+            <label class="radio-inline" for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="2">
+              Kambing
+            </label> 
+          </div>
+        </div>                    
                 </fieldset>
 
+                <fieldset class="form-group">
+                    <label>Id Hewan</label>
+                    <input class="form-control" type="number" min="0">
+                </fieldset>
 
-		<fieldset class="form-group">
+		      <fieldset class="form-group">
                     <label>Usia</label>
-                    <input class="form-control">
+                    <input class="form-control" type="number" min="0">
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label>Bobot</label>
-		    <input class="form-control">
+		              <input class="form-control" type="number" min="0">
                 </fieldset>
 		
+                <fieldset class="form-group">
+                    <label>Total Hewan</label>
+		              <input class="form-control" type="number">
+                </fieldset>
+                
 		 <div class="form-group">
                     <label>Status</label>
                     <select class="form-control">
                         <option>Sehat</option>
                         <option>Sakit</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
+                        <option>Mati</option>
                     </select>
                 </div>
 
-                <fieldset class="form-group">
-                    <label for="exampleInputFile">Avatar</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile">
-                </fieldset>
-
-
-                <button type="submit" class="btn btn-secondary">Submit</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
 
             </form>
 
