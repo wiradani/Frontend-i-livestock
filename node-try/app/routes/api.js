@@ -7,7 +7,7 @@ var config = require('../config'),
     allowOnly = require('../services/routesHelper').allowOnly,
     AuthController = require('../controllers/authController'),
     UserController = require('../controllers/userController'),
-    AdminController = require('../controllers/adminController');
+    AdminController = require('../controllers/adminController'),
     HewanController = require('../controllers/hewanController');
 
 var APIRoutes = function(passport) {
@@ -15,6 +15,8 @@ var APIRoutes = function(passport) {
     router.post('/signup', AuthController.signUp);
     router.post('/authenticate', AuthController.authenticateUser);
     router.post('/createHewan', HewanController.createHewan);
+    router.post('/deleteHewan', HewanController.deleteHewan);
+    router.post('/updateHewan', HewanController.updateHewan);
 
     // GET Routes.
     router.get('/profile', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, UserController.index));

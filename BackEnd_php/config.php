@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "Order_Home";
+$db = "si_fapet";
 
 /// Create connection
 $conn = mysqli_connect($servername, $username, $password, $db);
