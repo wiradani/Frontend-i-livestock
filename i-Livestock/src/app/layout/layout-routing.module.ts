@@ -20,6 +20,7 @@ const routes: Routes = [
             { path: 'tentang_kami', loadChildren: './tentang_kami/blank-page.module#BlankPageModule' },
 	    { path: 'bantuan', loadChildren: './bantuan/blank-page.module#BlankPageModule' },
 	    { path: 'profil', loadChildren: './profil/blank-page.module#BlankPageModule' },
+        { path: 'password', loadChildren: './password/blank-page.module#BlankPageModule' },
 	    { path: 'kotak_masuk', loadChildren: './kotak_masuk/blank-page.module#BlankPageModule' },
 	    { path: 'pengaturan', loadChildren: './pengaturan/blank-page.module#BlankPageModule' }
         ]

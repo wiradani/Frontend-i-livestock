@@ -4,16 +4,23 @@
 
 <!-- Form Name -->
 <legend>Profil Saya</legend>
+  <div class="wrap">
+    <a [routerLink]="['/profil']" [routerLinkActive]="['router-link-active']" class="button">Profil</a>
+  </div>
 
-        <div class="nav nav-tabs">
+  <div class="wrap2">
+    <a [routerLink]="['/password']" [routerLinkActive]="['router-link-active']" class="button">Password</a>
+  </div>
+<!--        <div class="nav nav-tabs">
           <button href="../profil/blank-page.component.html" data-toggle="tab">Profile</button>
           <button href="../password/blank-page.component.html" data-toggle="tab">Password</button>
         </div>
-    
+   --> 
+
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="profile">
             <form id="tab">
-<!-- Text input-->
+<!-- Text input--> <br> <br> <br>
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Nama</label>  
   <div class="col-md-4">
