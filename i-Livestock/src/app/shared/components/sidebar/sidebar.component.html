@@ -1,10 +1,10 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-home"></i>&nbsp;{{ 'Dashboard' | translate }}
+            <i class="fa fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
         </a>
 	<a [routerLink]="['/qurban_me']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'Qurban-me!' | translate }}
+            <i class="fa fa-fw fa-paw"></i>&nbsp;{{ 'Qurban-me!' | translate }}
         </a>
 	<div class="nested-menu">
             <a class="list-group-item" (click)="addExpandClass('pages')">
@@ -26,18 +26,19 @@
             </li>
         </div>
         <a [routerLink]="['/jumlah_hewan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah Hewan' | translate }}
+            <i class="fa fa-fw fa fa-pie-chart"></i>&nbsp;{{ 'Jumlah Hewan' | translate }}
         </a>
 	<a [routerLink]="['/jumlah_pakan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;{{ 'Jumlah Pakan' | translate }}
+            <i class="fa fa-fw fa fa-pie-chart"></i>&nbsp;{{ 'Jumlah Pakan' | translate }}
         </a>
        	<a [routerLink]="['/tambah_hewan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Update Hewan' | translate }}
+            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Tambah Hewan' | translate }}
+        </a>
+        
+        <a [routerLink]="['/tambah_pakan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>&nbsp;{{ 'Tambah Pakan' | translate }}
         </a>
         <!--
-        <a [routerLink]="['/tentang_kami']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-file-o"></i>&nbsp;{{ 'Tentang Kami' | translate }}
-        </a>
 	<a [routerLink]="['/bantuan']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-file-o"></i>&nbsp;{{ 'Bantuan' | translate }}
         </a>    -->

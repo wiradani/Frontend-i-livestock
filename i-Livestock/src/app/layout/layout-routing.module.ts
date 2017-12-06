@@ -14,6 +14,7 @@ const routes: Routes = [
 	        { path: 'kambing', loadChildren: './kambing/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             { path: 'tambah_hewan', loadChildren: './tambah_hewan/form.module#FormModule' },
+            { path: 'tambah_pakan', loadChildren: './tambah_pakan/form.module#FormModule' },
             { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
             { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },

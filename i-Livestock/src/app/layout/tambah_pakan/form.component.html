@@ -1,5 +1,5 @@
 <div [@routerTransition]>
-    <app-page-header [heading]="'Tambah Hewan'" [icon]="'fa-edit'"></app-page-header>
+    <app-page-header [heading]="'Tambah Pakan'" [icon]="'fa-edit'"></app-page-header>
 
     <div class="row">
         <div class="col-lg-6">
@@ -23,31 +23,20 @@
         </div>                    
                 </fieldset>
 
-                <fieldset class="form-group">
-                    <label>Id Hewan</label>
-                    <input class="form-control" type="number" min="0">
-                </fieldset>
-
 		      <fieldset class="form-group">
-                    <label>Usia (bulan)</label>
-                    <input class="form-control" type="number" min="0">
+                    <label>Nama Pakan</label>
+                    <input class="form-control" type="text">
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label>Jenis Pakan</label>
+		              <input class="form-control" type="text">
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Bobot (kg)</label>
+                    <label>Jumlah Pakan (kg)</label>
 		              <input class="form-control" type="number" min="0">
                 </fieldset>
-		
-                
-                
-		 <div class="form-group">
-                    <label>Status</label>
-                    <select class="form-control">
-                        <option>Sehat</option>
-                        <option>Sakit</option>
-                        <option>Mati</option>
-                    </select>
-                </div>
 
                 <button type="tambah" class="btn btn-primary">Tambah</button>
                 <button type="reset" class="btn btn-danger">Reset</button>

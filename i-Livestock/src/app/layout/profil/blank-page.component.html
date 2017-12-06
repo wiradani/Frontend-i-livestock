@@ -5,17 +5,12 @@
 <!-- Form Name -->
 <legend>Profil Saya</legend>
   <div class="wrap">
-    <a [routerLink]="['/profil']" [routerLinkActive]="['router-link-active']" class="button">Profil</a>
+    <a [routerLink]="['/profil']" [routerLinkActive]="['router-link-active']" class="button">Edit Profil</a>
   </div>
 
   <div class="wrap2">
-    <a [routerLink]="['/password']" [routerLinkActive]="['router-link-active']" class="button">Password</a>
+    <a [routerLink]="['/password']" [routerLinkActive]="['router-link-active']" class="button">Ganti Password</a>
   </div>
-<!--        <div class="nav nav-tabs">
-          <button href="../profil/blank-page.component.html" data-toggle="tab">Profile</button>
-          <button href="../password/blank-page.component.html" data-toggle="tab">Password</button>
-        </div>
-   --> 
 
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane active in" id="profile">
@@ -75,13 +70,3 @@
 </form>
 
 </div>
-        
-        <div class="tab-pane fade" id="pass">
-    	<form id="tab2">
-        	<label>Password Baru</label>
-        	<input type="password" class="input-xlarge">
-        	<div>
-        	    <button class="btn btn-primary">Update</button>
-        	</div>
-    	</form>
-      </div>
