@@ -7,7 +7,7 @@ var Hewan = require('../models/hewan'),
 // The user controller.
 var HewanController = {};
 
-//create hewab
+//create hewan
 HewanController.createHewan = function(req, res) {
 
     db.sync().then(function() {
@@ -18,6 +18,7 @@ HewanController.createHewan = function(req, res) {
             usia: req.body.usia,
             berat_badan: req.body.berat_badan,
             status_hewan: req.body.status_hewan,
+            kandang: req.body.kandang,
         };
 
         return Hewan.create(newHewan).then(function() {
@@ -30,6 +31,7 @@ HewanController.createHewan = function(req, res) {
 
 }
 
+//delete hewan
 HewanController.deleteHewan = function(req, res) {
 
     db.sync().then(function() {
@@ -47,6 +49,7 @@ HewanController.deleteHewan = function(req, res) {
 
 }
 
+//update hewan
 HewanController.updateHewan = function(req, res) {
 
     db.sync().then(function() {
@@ -57,9 +60,10 @@ HewanController.updateHewan = function(req, res) {
         usia: req.body.usia,
         berat_badan: req.body.berat_badan,
         status_hewan: req.body.status_hewan,
+        kandang: req.body.kandang,
           }, {
             where: {
-              id:req.body.id 
+              id:req.body.id
             }
           });
           return  res.status(201).json({ message: 'data berhasil diubah!' });
