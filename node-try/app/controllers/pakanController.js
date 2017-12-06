@@ -7,7 +7,7 @@ var Pakan = require('../models/pakan'),
 // The user controller.
 var PakanController = {};
 
-//create hewan
+//create pakan
 PakanController.createPakan = function(req, res) {
 
     db.sync().then(function() {

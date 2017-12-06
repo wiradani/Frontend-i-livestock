@@ -15,11 +15,11 @@ var modelDefinition = {
     },
 
     jenis_pakan: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING
     },
 
     jumlah_pakan: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER
     }
 
 };
