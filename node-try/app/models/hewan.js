@@ -32,6 +32,10 @@ var modelDefinition = {
 
     status_hewan:{
         type: Sequelize.STRING
+    },
+
+    kandang:{
+        type: Sequelize.STRING
     }
 
 };
