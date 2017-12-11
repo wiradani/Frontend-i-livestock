@@ -9,20 +9,22 @@ var config = require('../config'),
 
 // 1: The model schema.
 var modelDefinition = {
+    nomor_eartag: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+
     jenis_hewan: {
         type: Sequelize.STRING,
         allowNull: false
     },
 
-    deskripsi_hewan: {
-        type: Sequelize.STRING,
-    },
 
     spesies_hewan: {
         type: Sequelize.STRING,
     },
 
-    usia: {
+    tanggal_lahir: {
         type: Sequelize.INTEGER
     },
 
@@ -30,13 +32,25 @@ var modelDefinition = {
         type: Sequelize.FLOAT
     },
 
-    status_hewan:{
+    kesehatan_hewan:{
+        type: Sequelize.STRING
+    },
+
+    status_kurban:{
         type: Sequelize.STRING
     },
 
     kandang:{
         type: Sequelize.STRING
-    }
+    },
+
+    induk_jantan:{
+        type: Sequelize.STRING
+    },
+
+    induk_betina:{
+        type: Sequelize.STRING
+    },
 
 };
 

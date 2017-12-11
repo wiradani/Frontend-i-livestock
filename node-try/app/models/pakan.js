@@ -9,17 +9,22 @@ var config = require('../config'),
 
 // 1: The model schema.
 var modelDefinition = {
+    jenis_pakan: {
+        type: Sequelize.STRING
+    },
+
     nama_pakan: {
         type: Sequelize.STRING,
         allowNull: false
     },
 
-    jenis_pakan: {
-        type: Sequelize.STRING
-    },
 
     jumlah_pakan: {
         type: Sequelize.INTEGER
+    },
+
+    kandungan: {
+        type: Sequelize.STRING
     }
 
 };

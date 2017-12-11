@@ -12,9 +12,10 @@ PakanController.createPakan = function(req, res) {
 
     db.sync().then(function() {
         var newPakan = {
-            nama_pakan: req.body.nama_pakan,
             jenis_pakan: req.body.jenis_pakan,
+            nama_pakan: req.body.nama_pakan,
             jumlah_pakan: req.body.jumlah_pakan,
+            kandungan: req.body.kandungan
 
         };
 
@@ -51,9 +52,10 @@ PakanController.updatePakan = function(req, res) {
 
     db.sync().then(function() {
       Pakan.update({
-        nama_pakan: req.body.nama_pakan,
-        jenis_pakan: req.body.jenis_pakan,
-        jumlah_pakan: req.body.jumlah_pakan,
+            jenis_pakan: req.body.jenis_pakan,
+            nama_pakan: req.body.nama_pakan,
+            jumlah_pakan: req.body.jumlah_pakan,
+            kandungan: req.body.kandungan
           }, {
             where: {
               id:req.body.id
