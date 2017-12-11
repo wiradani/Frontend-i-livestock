@@ -58,6 +58,7 @@ AuthController.authenticateUser = function(req, res) {
                 });
             }
         }).catch(function(error) {
+          console.log();
             res.status(500).json({ message: 'There was an error!' });
         });
     }

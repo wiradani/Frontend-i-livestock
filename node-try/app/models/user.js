@@ -23,19 +23,22 @@ var modelDefinition = {
     role: {
         type: Sequelize.INTEGER,
         defaultValue: config.userRoles.user
-    },
-
-    email: {
-        type: Sequelize.STRING
-    },
-
-    name:{
-        type: Sequelize.STRING
-    },
-
-    phone:{
-        type: Sequelize.INTEGER
     }
+
+    // email: {
+    //     type: Sequelize.STRING
+    // }
+    //
+    // name:{
+    //     type: Sequelize.STRING
+    // }
+    //
+    // phone:{
+    //     type: Sequelize.INTEGER
+    // }
+
+
+
 
 };
 

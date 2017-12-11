@@ -25,10 +25,13 @@
         "@ng-bootstrap/ng-bootstrap": "^1.0.0-beta.4",
         "@ngx-translate/core": "^7.2.0",
         "@ngx-translate/http-loader": "^0.1.0",
+        "angular-jwt-auth": "^4.0.13",
         "angular-ui-bootstrap": "^2.5.6",
+        "angular2-jwt": "^0.2.3",
         "core-js": "^2.5.1",
         "font-awesome": "^4.7.0",
         "ng2-charts": "^1.6.0",
+        "ngx-progressbar": "^2.1.1",
         "rxjs": "^5.4.3",
         "zone.js": "^0.8.17"
     },
@@ -50,7 +53,7 @@
         "protractor": "~5.1.2",
         "ts-node": "~3.0.4",
         "tslint": "~5.3.2",
-        "typescript": "~2.5.2",
+        "typescript": "^2.3.4",
         "webpack": "^3.8.1"
     }
 }
