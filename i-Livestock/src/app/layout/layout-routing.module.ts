@@ -12,6 +12,7 @@ const routes: Routes = [
 	        { path: 'jumlah_pakan', loadChildren: './jumlah_pakan/charts.module#ChartsModule' },
 	        { path: 'sapi', loadChildren: './sapi/charts.module#ChartsModule' },
 	        { path: 'kambing', loadChildren: './kambing/charts.module#ChartsModule' },
+            { path: 'domba', loadChildren: './domba/charts.module#ChartsModule' },
             { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
             { path: 'tambah_hewan', loadChildren: './tambah_hewan/form.module#FormModule' },
             { path: 'tambah_pakan', loadChildren: './tambah_pakan/form.module#FormModule' },

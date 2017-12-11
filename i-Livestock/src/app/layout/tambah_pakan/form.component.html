@@ -6,10 +6,10 @@
 
             <form role="form">
                 <fieldset class="form-group">
-                    <label>Jenis hewan</label>
+                    <label>Jenis Hewan</label>
                     <div class="form-group">
-  <label class="col-md-4 control-label" for="radios"></label>
-          <div class="col-md-4"> 
+    <label class="col-md-4 control-label" for="radios"></label>
+          <div class="row"> 
             <label class="radio-inline" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked" />
               Sapi
@@ -18,6 +18,11 @@
             <label class="radio-inline" for="radios-1">
               <input type="radio" name="radios" id="radios-1" value="2">
               Kambing
+            </label>
+              
+            <label class="radio-inline" for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="3">
+              Domba
             </label> 
           </div>
         </div>                    
@@ -30,12 +35,30 @@
                 
                 <fieldset class="form-group">
                     <label>Jenis Pakan</label>
-		              <input class="form-control" type="text">
-                </fieldset>
+                    <div class="form-group">
+            <label class="col-md-4 control-label" for="radios"></label>
+                  <div class="row"> 
+                    <label class="radio-inline" for="radios-0">
+                      <input type="radio" name="radios" id="radios-0" value="1">
+                      Rumput
+                    </label>
+
+                    <label class="radio-inline" for="radios-1">
+                      <input type="radio" name="radios" id="radios-1" value="2">
+                      Konsentrat
+                    </label>
+                  </div>
+                </div>                    
+                        </fieldset>
 
                 <fieldset class="form-group">
                     <label>Jumlah Pakan (kg)</label>
 		              <input class="form-control" type="number" min="0">
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label>Kandungan</label>
+		              <input class="form-control" type="text">
                 </fieldset>
 
                 <button type="tambah" class="btn btn-primary">Tambah</button>

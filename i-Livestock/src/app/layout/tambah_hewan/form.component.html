@@ -6,10 +6,10 @@
 
             <form role="form">
                 <fieldset class="form-group">
-                    <label>Jenis hewan</label>
+                    <label>Jenis Hewan</label>
                     <div class="form-group">
   <label class="col-md-4 control-label" for="radios"></label>
-          <div class="col-md-4"> 
+          <div class="row"> 
             <label class="radio-inline" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked" />
               Sapi
@@ -19,6 +19,11 @@
               <input type="radio" name="radios" id="radios-1" value="2">
               Kambing
             </label> 
+              
+            <label class="radio-inline" for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="3">
+              Domba
+            </label> 
           </div>
         </div>                    
                 </fieldset>
@@ -26,6 +31,16 @@
                 <fieldset class="form-group">
                     <label>Id Hewan</label>
                     <input class="form-control" type="number" min="0">
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label>Nomor Eartag</label>
+                    <input class="form-control" type="number" min="0">
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <label>Spesies</label>
+                    <input class="form-control" type="text">
                 </fieldset>
 
 		      <fieldset class="form-group">
@@ -40,14 +55,25 @@
 		
                 
                 
-		 <div class="form-group">
+		       <div class="form-group">
                     <label>Status</label>
                     <select class="form-control">
                         <option>Sehat</option>
                         <option>Sakit</option>
                         <option>Mati</option>
+                        <option>Kurban</option>
                     </select>
                 </div>
+                
+                <fieldset class="form-group">
+                    <label>Kandang</label>
+                    <input class="form-control" type="number" min="0">
+                </fieldset>
+                <!--
+                <fieldset class="form-group">
+                    <label>Induk</label>
+                    <input class="form-control" type="number" min="0">
+                </fieldset> -->
 
                 <button type="tambah" class="btn btn-primary">Tambah</button>
                 <button type="reset" class="btn btn-danger">Reset</button>

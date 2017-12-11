@@ -1,0 +1,60 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="' Domba'" [icon]="'fa-table'"></app-page-header>
+    <div class="row">
+        <div class="col col-xl-12 col-lg-12">
+            <div class="card mb-3">
+                <div class="card-header">Tabel Data Domba</div>
+                <div class="card-block table-responsive">
+                    <table class="table">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>#</th>
+                            <th>ID</th>
+                            <th>Usia (bln)</th>
+                            <th>Jenis</th>
+			    <th>Bobot (kg)</th>
+			    <th>Status</th>
+			    <th>Aksi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Domba001</td>
+                            <td>2</td>
+                            <td>perah</td>
+			    <td>46</td>
+			    <td>sehat</td>
+			    <td><a class="btn btn-sq-lg btn-success" href="#">
+  <i class="fa fa-fw fa-edit"></i> Edit</a> <a class="btn btn-danger" href="#">
+  <i class="fa fa-trash-o fa-lg"></i> Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Domba002</td>
+                            <td>3</td>
+                            <td>perah</td>
+			    <td>67</td>
+			    <td>sakit</td>
+			    <td><a class="btn btn-sq-lg btn-success" href="#">
+  <i class="fa fa-fw fa-edit"></i> Edit</a> <a class="btn btn-danger" href="#">
+  <i class="fa fa-trash-o fa-lg"></i> Delete</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Domba003</td>
+                            <td>4</td>
+                            <td>perah</td>
+			    <td>49</td>
+			    <td>sehat</td>
+			    <td><a class="btn btn-sq-lg btn-success" href="#">
+  <i class="fa fa-fw fa-edit"></i> Edit</a> <a class="btn btn-danger" href="#">
+  <i class="fa fa-trash-o fa-lg"></i> Delete</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
