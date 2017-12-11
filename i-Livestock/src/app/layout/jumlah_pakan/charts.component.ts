@@ -33,13 +33,8 @@ export class ChartsComponent implements OnInit {
     ];
     public radarChartType: string = 'radar';
     // Pie
-<<<<<<< HEAD
     public pieChartLabels: string[] = ['Rumput', 'Konsentrat'];
     public pieChartData: number[] = [500, 300];
-=======
-    public pieChartLabels: string[] = ['Rumput Korea', 'Jerami Gajah', 'Tanaman Gak Liar'];
-    public pieChartData: number[] = [350, 500, 150];
->>>>>>> 61194b128effe327c79a4ebf01580bd7640df85f
     public pieChartType: string = 'pie';
     // PolarArea
     public polarAreaChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales', 'Telesales', 'Corporate Sales'];
