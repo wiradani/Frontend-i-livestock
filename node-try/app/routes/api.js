@@ -26,6 +26,8 @@ var APIRoutes = function(passport) {
     // GET Routes.
     router.get('/profile', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, UserController.index));
     router.get('/admin', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.admin, AdminController.index));
+    router.get('/hewan', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, HewanController.listHewan));
+    router.get('/pakan', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, PakanController.listPakan));
 
     return router;
 };
