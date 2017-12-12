@@ -8,17 +8,8 @@ var Sequelize = require('sequelize'),
 
 var config = require('../config'),
     db = require('../services/database');
+var UserModel = require('../models/user');
 
-// const user = sequelize.define('user', {});
-// const hewan = sequelize.define('hewan', {});
-
-
-// //asosiasi many to many
-
-//   hewan.belongsToMany(models.user, {
-//     through: 'mengelola_ternak',
-//     foreignKey: 'id_hewan'
-//   });
 
 
 // 1: The model schema.
@@ -39,7 +30,7 @@ var modelDefinition = {
     },
 
     tanggal_lahir: {
-        type: Sequelize.INTEGER
+        type: Sequelize.DATE
     },
 
     berat_badan:{
@@ -71,5 +62,10 @@ var modelDefinition = {
 // 3: Define the User model.
 var HewanModel = db.define('hewan', modelDefinition );
 
+// //association
+// HewanModel.belongsToMany(UserModel, {
+//     through: 'mengelola_ternak',
+//     foreignKey: 'id_user'
+// });
 
 module.exports = HewanModel;

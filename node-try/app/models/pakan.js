@@ -8,16 +8,8 @@ var Sequelize = require('sequelize'),
 
 var config = require('../config'),
     db = require('../services/database');
+var UserModel = require('../models/user');
 
-// const user = sequelize.define('user', {});
-// const pakan = sequelize.define('pakan', {});
-
-// //asosiasi many to many
-
-//   pakan.belongsToMany(models.user, {
-//     through: 'mengelola_pakan',
-//     foreignKey: 'id_pakan'
-//   });
 
 
 
@@ -45,5 +37,10 @@ var modelDefinition = {
 // 3: Define the User model.
 var PakanModel = db.define('pakan', modelDefinition );
 
+//association
+// PakanModel.BelongsToMany(UserModel, {
+//     through: 'mengelola_pakan',
+//     foreignKey: 'id_user'
+// });
 
 module.exports = PakanModel;

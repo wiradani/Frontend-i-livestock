@@ -1,3 +1,8 @@
+//asosiasi many to many
+
+
+
+
 // The User model.
 'use strict';
 
@@ -6,6 +11,12 @@ var Sequelize = require('sequelize'),
 
 var config = require('../config'),
     db = require('../services/database');
+
+var HewanModel = require('../models/hewan');
+var PakanModel = require('../models/pakan');
+
+
+
 
 // 1: The model schema.
 var modelDefinition = {
@@ -25,17 +36,17 @@ var modelDefinition = {
         defaultValue: config.userRoles.user
     },
 
-    // email: {
-    //     type: Sequelize.STRING
-    // },
-    //
-    // name:{
-    //     type: Sequelize.STRING
-    // },
-    //
-    // phone:{
-    //     type: Sequelize.INTEGER
-    // }
+    email: {
+        type: Sequelize.STRING
+    },
+
+    name:{
+        type: Sequelize.STRING
+    },
+
+    phone:{
+        type: Sequelize.INTEGER
+    }
 
 };
 
@@ -71,5 +82,19 @@ function hashPassword(user) {
         });
     }
 }
+
+
+
+// //assosiaction
+// UserModel.BelongsToMany(PakanModel, {
+//     through: 'mengelola_pakan',
+//     foreignKey: 'id_user'
+// });
+
+// UserModel.BelongsToMany(HewanModel, {
+//     through: 'mengelola_ternak',
+//     foreignKey: 'id_user'
+// });
+
 
 module.exports = UserModel;
