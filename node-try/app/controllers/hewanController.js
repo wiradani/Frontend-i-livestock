@@ -12,13 +12,16 @@ HewanController.createHewan = function(req, res) {
 
     db.sync().then(function() {
         var newHewan = {
+            nomor_eartag: req.body.nomor_eartag,
             jenis_hewan: req.body.jenis_hewan,
-            deskripsi_hewan: req.body.deskripsi_hewan,
             spesies_hewan: req.body.spesies_hewan,
-            usia: req.body.usia,
+            tanggal_lahir: req.body.tanggal_lahir,
             berat_badan: req.body.berat_badan,
-            status_hewan: req.body.status_hewan,
+            kesehatan_hewan: req.body.kesehatan_hewan,
+            status_kurban: req.body.status_kurban,
             kandang: req.body.kandang,
+            induk_jantan: req.body.induk_jantan,
+            induk_betina: req.body.induk_betina
         };
 
         return Hewan.create(newHewan).then(function() {
@@ -54,13 +57,16 @@ HewanController.updateHewan = function(req, res) {
 
     db.sync().then(function() {
       Hewan.update({
-        jenis_hewan: req.body.jenis_hewan,
-        deskripsi_hewan: req.body.deskripsi_hewan,
-        spesies_hewan: req.body.spesies_hewan,
-        usia: req.body.usia,
-        berat_badan: req.body.berat_badan,
-        status_hewan: req.body.status_hewan,
-        kandang: req.body.kandang,
+        	nomor_eartag: req.body.nomor_eartag,
+            jenis_hewan: req.body.jenis_hewan,
+            spesies_hewan: req.body.spesies_hewan,
+            tanggal_lahir: req.body.tanggal_lahir,
+            berat_badan: req.body.berat_badan,
+            kesehatan_hewan: req.body.kesehatan_hewan,
+            status_kurban: req.body.status_kurban,
+            kandang: req.body.kandang,
+            induk_jantan: req.body.induk_jantan,
+            induk_betina: req.body.induk_betina
           }, {
             where: {
               id:req.body.id

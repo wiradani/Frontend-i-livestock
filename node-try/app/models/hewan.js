@@ -1,4 +1,6 @@
 
+
+
 'use strict';
 
 var Sequelize = require('sequelize'),
@@ -7,22 +9,36 @@ var Sequelize = require('sequelize'),
 var config = require('../config'),
     db = require('../services/database');
 
+// const user = sequelize.define('user', {});
+// const hewan = sequelize.define('hewan', {});
+
+
+// //asosiasi many to many
+
+//   hewan.belongsToMany(models.user, {
+//     through: 'mengelola_ternak',
+//     foreignKey: 'id_hewan'
+//   });
+
+
 // 1: The model schema.
 var modelDefinition = {
+    nomor_eartag: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+
     jenis_hewan: {
         type: Sequelize.STRING,
         allowNull: false
     },
 
-    deskripsi_hewan: {
-        type: Sequelize.STRING,
-    },
 
     spesies_hewan: {
         type: Sequelize.STRING,
     },
 
-    usia: {
+    tanggal_lahir: {
         type: Sequelize.INTEGER
     },
 
@@ -30,13 +46,25 @@ var modelDefinition = {
         type: Sequelize.FLOAT
     },
 
-    status_hewan:{
+    kesehatan_hewan:{
+        type: Sequelize.STRING
+    },
+
+    status_kurban:{
         type: Sequelize.STRING
     },
 
     kandang:{
         type: Sequelize.STRING
-    }
+    },
+
+    induk_jantan:{
+        type: Sequelize.STRING
+    },
+
+    induk_betina:{
+        type: Sequelize.STRING
+    },
 
 };
 
