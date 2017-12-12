@@ -1,4 +1,6 @@
 
+
+
 'use strict';
 
 var Sequelize = require('sequelize'),
@@ -7,19 +9,35 @@ var Sequelize = require('sequelize'),
 var config = require('../config'),
     db = require('../services/database');
 
+// const user = sequelize.define('user', {});
+// const pakan = sequelize.define('pakan', {});
+
+// //asosiasi many to many
+
+//   pakan.belongsToMany(models.user, {
+//     through: 'mengelola_pakan',
+//     foreignKey: 'id_pakan'
+//   });
+
+
+
 // 1: The model schema.
 var modelDefinition = {
-    nama_pakan: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-
     jenis_pakan: {
         type: Sequelize.STRING
     },
 
+    nama_pakan: {
+        type: Sequelize.STRING
+    },
+
+
     jumlah_pakan: {
         type: Sequelize.INTEGER
+    },
+
+    kandungan: {
+        type: Sequelize.STRING
     }
 
 };
