@@ -5,68 +5,68 @@
         <div class="col-lg-6">
 
             <form role="form">
-                <fieldset class="form-group">
+                <!-- <fieldset class="form-group">
                     <label>Jenis Hewan</label>
                     <div class="form-group">
     <label class="col-md-4 control-label" for="radios"></label>
-          <div class="row"> 
+          <div class="row">
             <label class="radio-inline" for="radios-0">
               <input type="radio" name="radios" id="radios-0" value="1" checked="checked" />
               Sapi
             </label>
-            
+
             <label class="radio-inline" for="radios-1">
               <input type="radio" name="radios" id="radios-1" value="2">
               Kambing
             </label>
-              
+
             <label class="radio-inline" for="radios-1">
               <input type="radio" name="radios" id="radios-1" value="3">
               Domba
-            </label> 
+            </label>
           </div>
-        </div>                    
-                </fieldset>
+        </div>
+                </fieldset> -->
 
 		      <fieldset class="form-group">
                     <label>Nama Pakan</label>
-                    <input class="form-control" type="text">
+                    <input  formControlName="nama_pakan" type="text" id="nama_pakan">
                 </fieldset>
-                
+
                 <fieldset class="form-group">
                     <label>Jenis Pakan</label>
                     <div class="form-group">
             <label class="col-md-4 control-label" for="radios"></label>
-                  <div class="row"> 
+                  <div class="row">
                     <label class="radio-inline" for="radios-0">
-                      <input type="radio" name="radios" id="radios-0" value="1">
+                      <input type="radio" name="radios" ng-model="jenis_pakan" id="radios-0" value="1" id="jenis_pakan" fromControlName="jenis_pakan">
                       Rumput
                     </label>
 
                     <label class="radio-inline" for="radios-1">
-                      <input type="radio" name="radios" id="radios-1" value="2">
+                      <input type="radio" name="radios" ng-model="jenis_pakan" id="radios-1" value="2" id="jenis_pakan" fromControlName="jenis_pakan">
                       Konsentrat
                     </label>
                   </div>
-                </div>                    
+                </div>
                         </fieldset>
 
                 <fieldset class="form-group">
                     <label>Jumlah Pakan (kg)</label>
-		              <input class="form-control" type="number" min="0">
-                </fieldset>
-                
-                <fieldset class="form-group">
-                    <label>Kandungan</label>
-		              <input class="form-control" type="text">
+		              <input class="form-control" type="number" ng-model="jumlah_pakan" min="0" id="jumlah_pakan" fromControlName="jumlah_pakan">
                 </fieldset>
 
-                <button type="tambah" class="btn btn-primary">Tambah</button>
+                <fieldset class="form-group">
+                    <label>Kandungan</label>
+		              <input class="form-control" type="text" ng-model="kandugan" id="kandugan" fromControlName="kandugan">
+                </fieldset>
+
+                <button type="tambah" class="btn btn-primary" (click)="addPakan(jenis_hewan,nama_pakan,jenis_pakan,jumlah_pakan,kandugan)">Tambah</button>
                 <button type="reset" class="btn btn-danger">Reset</button>
 
             </form>
 
         </div>
-     
+
     <!-- /.row -->
 </div>
