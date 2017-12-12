@@ -1,22 +1,28 @@
+
 <div class="login-page" [@routerTransition]>
     <div class="row">
         <div class="col-md-4 push-md-4">
+            <div *ngIf="this.form.get('username').touched && this.form.get('username').invalid" class="alert alert-danger">Username is required.</div>
+            <div *ngIf="this.form.get('password').touched && this.form.get('password').invalid" class="alert alert-danger">Password is required.</div>
+            <div *ngIf="wrongPass" class="alert alert-danger">Username or password is wrong.</div>
+
             <img src="assets/images/logo.png" width="150px" class="user-avatar" />
             <h1>Masuk</h1>
             <form role="form">
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" ng-model="name" class="form-control input-underline input-lg" id="" placeholder="Nama User">
+                        <input #username formControlName="username" type="text" ng-model="name" class="form-control input-underline input-lg" id="username" placeholder="Username">
                     </div>
+
 
 
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="Kata Sandi">
+                        <input #password formControlName="password" type="password" class="form-control input-underline input-lg" id="password" placeholder="Password">
                     </div>
+
+
+                    <a class="btn rounded-btn" (click)="onLoggedin(username, password)"> Masuk </a> &nbsp;
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="onLoggedin()"> Masuk </a>
-                &nbsp;<!--
-                <a class="btn rounded-btn" [routerLink]="['/signup']">Register</a>-->
             </form>
         </div>
     </div>
