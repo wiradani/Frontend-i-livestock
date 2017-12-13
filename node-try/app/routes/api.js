@@ -34,6 +34,9 @@ var APIRoutes = function(passport) {
     router.get('/countsapi', HewanController.countSapi);
     router.get('/countkambing', HewanController.countKambing);
     router.get('/countdomba', HewanController.countDomba);
+    router.get('/kurbansapi', HewanController.kurbanSapi);
+    router.get('/kurbankambing', HewanController.kurbanKambing);
+    router.get('/kurbandomba', HewanController.kurbanDomba);
 
     
     router.get('/pakan', PakanController.listPakan);

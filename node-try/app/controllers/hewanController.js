@@ -4,6 +4,10 @@ var Hewan = require('../models/hewan'),
     db = require('../services/database'),
     config = require('../config');
 
+var Sequelize = require('sequelize');
+
+const Op = Sequelize.Op;
+
 // The user controller.
 var HewanController = {};
 
@@ -142,6 +146,45 @@ HewanController.countDomba =async function(req, res) {
               where: {jenis_hewan: 'Domba'}
             })
             .then(function(countdomba){res.status(200).json(countdomba)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        } 
+
+HewanController.kurbanSapi =async function(req, res) {
+
+            Hewan.findAll({
+            where: {
+              jenis_hewan: 'Sapi',
+              tanggal_lahir: {[Op.gt]: 24},
+              kesehatan_hewan: 'sehat'
+            }
+            })
+            .then(function(kurbansapi){res.status(200).json(kurbansapi)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.kurbanKambing =async function(req, res) {
+
+            Hewan.findAll({
+            where: {
+              jenis_hewan: 'Kambing',
+              tanggal_lahir: {[Op.gt]: 12},
+              kesehatan_hewan: 'sehat'
+            }
+            })
+            .then(function(kurbankambing){res.status(200).json(kurbankambing)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.kurbanDomba =async function(req, res) {
+
+            Hewan.findAll({
+            where: {
+              jenis_hewan: 'Domba',
+              tanggal_lahir: {[Op.gt]: 6},
+              kesehatan_hewan: 'sehat'
+            }
+            })
+            .then(function(kurbandomba){res.status(200).json(kurbandomba)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         } 
 
