@@ -28,7 +28,9 @@ var APIRoutes = function(passport) {
     router.get('/admin', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.admin, AdminController.index));
     router.get('/hewan', HewanController.listHewan);
     router.get('/pakan', PakanController.listPakan);
-
+    router.get('/sapi', HewanController.listSapi);
+    router.get('/kambing', HewanController.listKambing);
+    router.get('/domba', HewanController.listDomba);
     return router;
 };
 

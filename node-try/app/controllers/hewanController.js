@@ -91,4 +91,31 @@ HewanController.listHewan =async function(req, res) {
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
 
+HewanController.listSapi =async function(req, res) {
+
+            Hewan.findAndCountAll({
+            where: {jenis_hewan: 'Sapi'}
+            })
+            .then(function(listsapi){res.status(200).json(listsapi)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.listKambing =async function(req, res) {
+
+            Hewan.findAndCountAll({
+            where: {jenis_hewan: 'Kambing'}
+            })
+            .then(function(listkambing){res.status(200).json(listkambing)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.listDomba =async function(req, res) {
+
+            Hewan.findAndCountAll({
+              where: {jenis_hewan: 'Domba'}
+            })
+            .then(function(listdomba){res.status(200).json(listdomba)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
 module.exports = HewanController;
