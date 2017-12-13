@@ -19,8 +19,6 @@ const routes: Routes = [
             { path: 'bs-element', loadChildren: './bs-element/bs-element.module#BsElementModule' },
             { path: 'grid', loadChildren: './grid/grid.module#GridModule' },
             { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
-            //{ path: 'tentang_kami', loadChildren: './tentang_kami/blank-page.module#BlankPageModule' },
-	    //{ path: 'bantuan', loadChildren: './bantuan/blank-page.module#BlankPageModule' },
         //{ path: 'statistik', loadChildren: './statistik/charts.module#BlankPageModule' },
 	    //{ path: 'profil', loadChildren: './profil/blank-page.module#BlankPageModule' },
       //  { path: 'password', loadChildren: './password/blank-page.module#BlankPageModule' },

@@ -14,7 +14,7 @@ import 'rxjs/add/operator/map'
 export class ChartsComponent implements OnInit {
   data: any ;
   response: any = [];
-
+  countall:any=[];
   sapi:number;
   kambing:any;
   domba:number;
@@ -25,7 +25,7 @@ export class ChartsComponent implements OnInit {
 
     // Pie
     public pieChartLabels: string[] = ['Sapi', 'Kambing', 'Domba'];
-    public pieChartData: number[] = [Number(this.kambing),12,31];//ini diganti data
+    public pieChartData: number[] =[] ;//ini diganti data
     public pieChartType: string = 'pie';
 
 
@@ -63,16 +63,34 @@ export class ChartsComponent implements OnInit {
 
     constructor(
       public router: Router,
-      public http: Http
+      public http: Http,
     ) {
+
+
       this.http.get(this.DATA_KAMBING)
       .map(res => res.json())
       .subscribe(data => {
-          this.kambing = data;
+      //this.kambing=data;
+      this.countall.push(data);
       });
+      this.http.get(this.DATA_SAPI)
+      .map(res => res.json())
+      .subscribe(data1 => {
+        this.countall.push(data1);
+      });
+      this.http.get(this.DATA_DOMBA)
+      .map(res => res.json())
+      .subscribe(data2 => {
+        this.countall.push(data2);
+      });
+
+      var pieChartData = this.countall;
 
     }
 
     ngOnInit() {
+
+        this.pieChartData.push(this.kambing,this.sapi,this.domba);
+
     }
 }
