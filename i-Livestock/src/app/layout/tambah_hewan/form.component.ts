@@ -71,7 +71,6 @@ import 'rxjs/add/operator/map'
         this.data.tanggal_lahir = this.form.get('tanggal_lahir').value;
         this.data.berat_badan = this.form.get('berat_badan').value;
 
-
        console.log("masuk")
         this.http.post(this.DATA_END_POINT,this.data)
         .subscribe(param =>{
