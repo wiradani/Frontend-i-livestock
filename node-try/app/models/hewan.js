@@ -30,7 +30,7 @@ var modelDefinition = {
     },
 
     tanggal_lahir: {
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER
     },
 
     berat_badan:{
