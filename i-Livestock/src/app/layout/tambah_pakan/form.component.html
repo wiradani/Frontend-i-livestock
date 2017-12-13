@@ -19,21 +19,20 @@
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Jenis Pakan</label>
-                    <div class="form-group">
-            <label class="col-md-4 control-label" for="radios"></label>
-                  <div class="row">
-                    <label class="radio-inline" for="radios-0">
-                      <input type="radio" name="radios" ng-model="data.jenis_pakan" id="radios-0" value="1" id="jenis_pakan" fromControlName="jenis_pakan">
-                      Rumput
-                    </label>
-
-                    <label class="radio-inline" for="radios-1">
-                      <input type="radio" name="radios" ng-model="data.jenis_pakan" id="radios-1" value="2" id="jenis_pakan" fromControlName="jenis_pakan">
-                      Konsentrat
-                    </label>
-                  </div>
+                  <div class="form-group">
+                    <label for="role">Jenis Pakan</label>
+                    <select
+                        #role
+                        formControlName="jenis_pakan"
+                        ng-model="jenis_pakan"
+                        id="jenis_pakan"
+                        placeholder="Jenis pakan"
+                        class="form-control">
+                            <option>rumput</option>
+                            <option>konsentrat</option>
+                    </select>
                 </div>
+
                         </fieldset>
 
                 <fieldset class="form-group">

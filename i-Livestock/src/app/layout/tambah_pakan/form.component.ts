@@ -59,21 +59,13 @@ export class FormComponent implements OnInit {
    }
 
    addPakan(){
-     let tmp = this.form.get('jenis_pakan').value;
+     this.data.jenis_pakan = this.form.get('jenis_pakan').value;
       this.data.nama_pakan = this.form.get('nama_pakan').value;
       this.data.jumlah_pakan = this.form.get('jumlah_pakan').value;
       this.data.kandungan = this.form.get('kandungan').value;
 
      console.log(this.data.jumlah_pakan);
      console.log(this.data.kandungan);
-     if(tmp == 1){
-      this.data.jenis_pakan = "Rumput";
-      console.log("masuk2")
-     }
-     else {
-       this.data.jenis_pakan = "Konsentrat";
-       console.log("masuk3")
-     }
 
      console.log("masuk")
       this.http.post(this.DATA_END_POINT,this.data)
