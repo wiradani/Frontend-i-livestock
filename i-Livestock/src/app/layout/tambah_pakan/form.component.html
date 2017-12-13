@@ -4,33 +4,18 @@
     <div class="row">
         <div class="col-lg-6">
 
-            <form role="form">
-                <!-- <fieldset class="form-group">
-                    <label>Jenis Hewan</label>
-                    <div class="form-group">
-    <label class="col-md-4 control-label" for="radios"></label>
-          <div class="row">
-            <label class="radio-inline" for="radios-0">
-              <input type="radio" name="radios" id="radios-0" value="1" checked="checked" />
-              Sapi
-            </label>
-
-            <label class="radio-inline" for="radios-1">
-              <input type="radio" name="radios" id="radios-1" value="2">
-              Kambing
-            </label>
-
-            <label class="radio-inline" for="radios-1">
-              <input type="radio" name="radios" id="radios-1" value="3">
-              Domba
-            </label>
-          </div>
-        </div>
-                </fieldset> -->
+            <form [formGroup]="form">
 
 		      <fieldset class="form-group">
                     <label>Nama Pakan</label>
-                    <input  formControlName="nama_pakan" type="text" id="nama_pakan">
+                    <input
+                        #namaPakan
+                        formControlName="nama_pakan"
+                        ng-model="nama_pakan"
+                        type="text"
+                        id="nama_pakan"
+                        placeholder="Nama Pakan"
+                        >
                 </fieldset>
 
                 <fieldset class="form-group">
@@ -39,12 +24,12 @@
             <label class="col-md-4 control-label" for="radios"></label>
                   <div class="row">
                     <label class="radio-inline" for="radios-0">
-                      <input type="radio" name="radios" ng-model="jenis_pakan" id="radios-0" value="1" id="jenis_pakan" fromControlName="jenis_pakan">
+                      <input type="radio" name="radios" ng-model="data.jenis_pakan" id="radios-0" value="1" id="jenis_pakan" fromControlName="jenis_pakan">
                       Rumput
                     </label>
 
                     <label class="radio-inline" for="radios-1">
-                      <input type="radio" name="radios" ng-model="jenis_pakan" id="radios-1" value="2" id="jenis_pakan" fromControlName="jenis_pakan">
+                      <input type="radio" name="radios" ng-model="data.jenis_pakan" id="radios-1" value="2" id="jenis_pakan" fromControlName="jenis_pakan">
                       Konsentrat
                     </label>
                   </div>
@@ -53,18 +38,34 @@
 
                 <fieldset class="form-group">
                     <label>Jumlah Pakan (kg)</label>
-		              <input class="form-control" type="number" ng-model="jumlah_pakan" min="0" id="jumlah_pakan" fromControlName="jumlah_pakan">
+		              <input
+                  #jumlahPakan
+                  formControlName="jumlah_pakan"
+                  ng-model="jumlah_pakan"
+                  type="number"
+                  id="jumlah_pakan"
+                  placeholder="jumlah_pakan"
+                  min=0
+                  class="form-control" 
+                  >
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label>Kandungan</label>
-		              <input class="form-control" type="text" ng-model="kandugan" id="kandugan" fromControlName="kandugan">
+		              <input
+                  #kandungan
+                  class="form-control"
+                  formControlName="kandungan"
+                  ng-model="kandungan"
+                  type="text"
+                  id="kandungan"
+                  placeholder="kandungan"
+                  >
                 </fieldset>
 
-                <button type="tambah" class="btn btn-primary" (click)="addPakan(jenis_hewan,nama_pakan,jenis_pakan,jumlah_pakan,kandugan)">Tambah</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
-
             </form>
+            <button type="tambah" class="btn btn-primary" (click)="addPakan()">Tambah</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
 
         </div>
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { routerTransition } from '../../router.animations';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import {Http} from '@angular/http';
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import 'rxjs/add/operator/map'
 
 @Component({
@@ -21,6 +21,9 @@ export class FormComponent implements OnInit {
   response: any = [];
   loader = false;
   DATA_END_POINT = 'http://localhost:8087/api/createPakan';
+
+  headers = new Headers({ 'Authorization': localStorage.getItem('userToken') });
+  options = new RequestOptions({ headers: this.headers });
 
   form = new FormGroup({
     jenis_pakan: new FormControl('', Validators.required),
@@ -55,18 +58,24 @@ export class FormComponent implements OnInit {
        return this.form.get('kandungan');
    }
 
-   addPakan(nama_pakan,jenis_pakan,jumlah_pakan,kandugan){
-     let tmp = jenis_pakan.value;
-     this.data.nama_pakan = nama_pakan.value;
-     this.data.jumlah_pakan = jumlah_pakan.value;
-     this.data.kandungan = kandugan.value;
+   addPakan(){
+     let tmp = this.form.get('jenis_pakan').value;
+      this.data.nama_pakan = this.form.get('nama_pakan').value;
+      this.data.jumlah_pakan = this.form.get('jumlah_pakan').value;
+      this.data.kandungan = this.form.get('kandungan').value;
 
+     console.log(this.data.jumlah_pakan);
+     console.log(this.data.kandungan);
      if(tmp == 1){
       this.data.jenis_pakan = "Rumput";
+      console.log("masuk2")
      }
      else {
        this.data.jenis_pakan = "Konsentrat";
+       console.log("masuk3")
      }
+
+     console.log("masuk")
       this.http.post(this.DATA_END_POINT,this.data)
       .subscribe(param =>{
                 this.response = param.json();
@@ -75,13 +84,13 @@ export class FormComponent implements OnInit {
                 this.loader = true;
 
                 if(this.response.success == true){
-                  "good job "
+                  console.log("good job ")
 
                 }
 
             },
             err =>{
-                "errorr"
+                console.log("errorr")
               //  this.progressService.done();
                 console.log(err);
             });
