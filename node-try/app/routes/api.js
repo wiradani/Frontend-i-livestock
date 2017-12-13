@@ -26,11 +26,15 @@ var APIRoutes = function(passport) {
     // GET Routes.
     router.get('/profile', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, UserController.index));
     router.get('/admin', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.admin, AdminController.index));
+    
     router.get('/hewan', HewanController.listHewan);
-    router.get('/pakan', PakanController.listPakan);
     router.get('/sapi', HewanController.listSapi);
     router.get('/kambing', HewanController.listKambing);
     router.get('/domba', HewanController.listDomba);
+    
+    router.get('/pakan', PakanController.listPakan);
+    router.get('/rumput', PakanController.listKonsentrat);
+    router.get('/konsentrat', PakanController.listRumput);
     return router;
 };
 
