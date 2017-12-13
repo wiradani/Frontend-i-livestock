@@ -4,81 +4,92 @@
     <div class="row">
         <div class="col-lg-6">
 
-            <form role="form">
+            <form [formGroup]="form">
+
                 <fieldset class="form-group">
                     <label>Jenis Hewan</label>
                     <div class="form-group">
-  <label class="col-md-4 control-label" for="radios"></label>
-          <div class="row">
-            <label class="radio-inline" for="radios-0">
-              <input #jenisHewan fromControlName="jenis_hewan" type="radio" name="radios" id="radios-0" value="1" checked="checked" />
-              Sapi
-            </label>
+            <label class="col-md-4 control-label" for="radios"></label>
+                  <div class="row">
+                    <label class="radio-inline" for="radios-0">
+                      <input type="radio" name="radios" ng-model="data.jenis_hewan" id="radios-0" value="Sapi" id="jenis_hewan" fromControlName="jenis_hewan">
+                      Sapi
+                    </label>
 
-            <label class="radio-inline" for="radios-1">
-              <input type="radio" name="radios" id="radios-1" value="2">
-              Kambing
-            </label>
+                    <label class="radio-inline" for="radios-1">
+                      <input type="radio" name="radios" ng-model="data.jenis_hewan" id="radios-1" value="Kambing" id="jenis_hewan" fromControlName="jenis_pakan">
+                      Kambing
+                    </label>
 
-            <label class="radio-inline" for="radios-1">
-              <input type="radio" name="radios" id="radios-1" value="3">
-              Domba
-            </label>
-          </div>
-        </div>
+                    <label class="radio-inline" for="radios-2">
+                      <input type="radio" name="radios" ng-model="data.jenis_hewan" id="radios-2" value="Domba" id="jenis_hewan" fromControlName="jenis_pakan">
+                      Domba
+                    </label>
+
+                  </div>
+                </div>
                 </fieldset>
-
-                <!-- <fieldset class="form-group">
-                    <label>Id Hewan</label>
-                    <input class="form-control" type="number" min="0">
-                </fieldset> -->
 
                 <fieldset class="form-group">
                     <label>Nomor Eartag</label>
-                    <input class="form-control" type="number" min="0">
+		              <input
+                  #nomorEartag
+                  formControlName="nomor_eartag"
+                  ng-model="nomor_eartag"
+                  type="number"
+                  id="nomor_eartag"
+                  placeholder="Nomor Eartag"
+                  min=0
+                  class="form-control"
+                  >
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Spesies</label>
-                    <input class="form-control" type="text">
-                </fieldset>
-
-		      <fieldset class="form-group">
-                    <label>Usia (bulan)</label>
-                    <input class="form-control" type="number" min="0">
+                    <label>Spesies </label>
+		              <input
+                  #spesies
+                  class="form-control"
+                  formControlName="spesies_hewan"
+                  ng-model="spesies_hewan"
+                  type="text"
+                  id="spesies_hewan"
+                  placeholder="spesies"
+                  >
                 </fieldset>
 
                 <fieldset class="form-group">
-                    <label>Bobot (kg)</label>
-		              <input class="form-control" type="number" min="0">
+                    <label>Usia (bulan) </label>
+		              <input
+                  #usia
+                  class="form-control"
+                  formControlName="tanggal_lahir"
+                  ng-model="tanggal_lahir"
+                  type="number"
+                  id="tanggal_lahir"
+                  placeholder="Usia"
+                  min=0
+                  >
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Bobot (Kg) </label>
+		              <input
+                  #beratBadan
+                  class="form-control"
+                  formControlName="berat_badan"
+                  ng-model="berat_badan"
+                  type="number"
+                  id="berat_badan"
+                  placeholder="Bobot"
+                  min=0
+                  >
                 </fieldset>
 
 
-
-		       <div class="form-group">
-                    <label>Status</label>
-                    <select class="form-control">
-                        <option>Sehat</option>
-                        <option>Sakit</option>
-                        <option>Mati</option>
-                        <option>Kurban</option>
-                    </select>
-                </div>
-
-                <fieldset class="form-group">
-                    <label>Kandang</label>
-                    <input class="form-control" type="number" min="0">
-                </fieldset>
-                <!--
-                <fieldset class="form-group">
-                    <label>Induk</label>
-                    <input class="form-control" type="number" min="0">
-                </fieldset> -->
-
-                <button type="tambah" class="btn btn-primary" (click)="onTambah(jenis_hewan, nomor_eartag, spesies, usia,bobot,status,kandang)">Tambah</button>
-                <button type="reset" class="btn btn-danger">Reset</button>
 
             </form>
+            <button type="tambah" class="btn btn-primary" (click)="addHewan()">Tambah</button>
+            <button type="reset" class="btn btn-danger" (click)="reset()">Reset</button>
 
         </div>
 

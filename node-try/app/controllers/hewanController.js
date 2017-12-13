@@ -25,6 +25,7 @@ HewanController.createHewan = function(req, res) {
         };
 
         return Hewan.create(newHewan).then(function() {
+          res.json({ success: true});
             res.status(201).json({ message: 'data berhasil ditambahkan!' });
         });
     }).catch(function(error) {

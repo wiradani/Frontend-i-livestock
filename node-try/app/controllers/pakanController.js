@@ -20,6 +20,7 @@ PakanController.createPakan = function(req, res) {
         };
 
         return Pakan.create(newPakan).then(function() {
+          res.json({ success: true});
             res.status(201).json({ message: 'data berhasil ditambahkan!' });
         });
     }).catch(function(error) {
@@ -61,7 +62,7 @@ PakanController.updatePakan = function(req, res) {
               id:req.body.id
             }
           });
-          return  res.status(201).json({ message: 'data berhasil diubah!' });
+          return  res.status(201).json({ message: 'data berhasil diubah!' }) ;
 
     }).catch(function(error) {
       console.log(error)

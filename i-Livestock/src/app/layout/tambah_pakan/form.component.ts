@@ -85,7 +85,10 @@ export class FormComponent implements OnInit {
 
                 if(this.response.success == true){
                   console.log("good job ")
-
+                  this.form.get('jenis_pakan').setValue("");
+                  this.form.get('nama_pakan').setValue("");
+                  this.form.get('jumlah_pakan').setValue("");
+                  this.form.get('kandungan').setValue("");
                 }
 
             },
@@ -94,6 +97,13 @@ export class FormComponent implements OnInit {
               //  this.progressService.done();
                 console.log(err);
             });
+    }
+    reset(){
+      this.form.get('jenis_pakan').setValue("");
+      this.form.get('nama_pakan').setValue("");
+      this.form.get('jumlah_pakan').setValue("");
+      this.form.get('kandungan').setValue("");
+
     }
 
    }
