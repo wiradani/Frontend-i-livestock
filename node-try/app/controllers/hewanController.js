@@ -82,22 +82,12 @@ HewanController.updateHewan = function(req, res) {
 }
 
 //get hewan
-HewanController.listHewan =async function(req, res) {
-    var token = await req.headers.authorization
-    var accessStatus = await Access.checkAuthentication("hewan", "get", null, token)
-    if (!accessStatus.status) {
-        return res.status(500).json({status: false, message: "Internal Server Error (Access)"})
-    }else{
-        if (!accessStatus.auth) {
-            return res.status(404).json({status: false, message: "No Project Found"})
-        }else{
+HewanController.listPakan =async function(req, res) {
+
             Hewan.findAll({
-                where:{project_id:{$in:accessStatus.projects_id}}
             })
             .then(function(listhewan){res.status(200).json(listhewan)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
-    }
-}
 
 module.exports = HewanController;
