@@ -118,4 +118,31 @@ HewanController.listDomba =async function(req, res) {
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
 
+HewanController.countSapi =async function(req, res) {
+
+            Hewan.count({
+            where: {jenis_hewan: 'Sapi'}
+            })
+            .then(function(countsapi){res.status(200).json(countsapi)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.countKambing =async function(req, res) {
+
+            Hewan.count({
+            where: {jenis_hewan: 'Kambing'}
+            })
+            .then(function(countkambing){res.status(200).json(countkambing)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+HewanController.countDomba =async function(req, res) {
+
+            Hewan.count({
+              where: {jenis_hewan: 'Domba'}
+            })
+            .then(function(countdomba){res.status(200).json(countdomba)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        } 
+
 module.exports = HewanController;
