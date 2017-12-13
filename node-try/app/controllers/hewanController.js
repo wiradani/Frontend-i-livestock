@@ -82,7 +82,7 @@ HewanController.updateHewan = function(req, res) {
 }
 
 //get hewan
-HewanController.listPakan =async function(req, res) {
+HewanController.listHewan =async function(req, res) {
 
             Hewan.findAll({
             })
