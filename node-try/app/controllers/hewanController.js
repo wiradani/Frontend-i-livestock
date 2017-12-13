@@ -84,7 +84,7 @@ HewanController.updateHewan = function(req, res) {
 //get hewan
 HewanController.listHewan =async function(req, res) {
 
-            Hewan.findAll({
+            Hewan.findAndCountAll({
             })
             .then(function(listhewan){res.status(200).json(listhewan)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})

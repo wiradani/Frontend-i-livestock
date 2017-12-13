@@ -73,7 +73,7 @@ PakanController.updatePakan = function(req, res) {
 //get pakan
 PakanController.listPakan =async function(req, res) {
 
-            Pakan.findAll({
+            Pakan.findAndCountAll({
             })
             .then(function(listpakan){res.status(200).json(listpakan)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
