@@ -95,6 +95,22 @@ PakanController.listKonsentrat =async function(req, res) {
       .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
 }
 
+PakanController.countRumput =async function(req, res) {
+      Pakan.count({
+        where: {jenis_pakan: 'Rumput'}
+      })
+      .then(function(countrumput){res.status(200).json(countrumput)})
+      .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+}
+
+PakanController.countKonsentrat =async function(req, res) {
+      Pakan.count({
+        where: {jenis_pakan: 'Konsentrat'}
+      })
+      .then(function(countkonsentrat){res.status(200).json(countkonsentrat)})
+      .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+}
+
 
 
 

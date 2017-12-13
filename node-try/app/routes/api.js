@@ -42,6 +42,8 @@ var APIRoutes = function(passport) {
     router.get('/pakan', PakanController.listPakan);
     router.get('/rumput', PakanController.listKonsentrat);
     router.get('/konsentrat', PakanController.listRumput);
+    router.get('/countrumput', PakanController.countKonsentrat);
+    router.get('/countkonsentrat', PakanController.countRumput);
     return router;
 };
 
