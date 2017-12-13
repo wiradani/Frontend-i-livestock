@@ -37,10 +37,6 @@ var modelDefinition = {
 // 3: Define the User model.
 var PakanModel = db.define('pakan', modelDefinition );
 
-//association
-// PakanModel.BelongsToMany(UserModel, {
-//     through: 'mengelola_pakan',
-//     foreignKey: 'id_user'
-// });
+
 
 module.exports = PakanModel;

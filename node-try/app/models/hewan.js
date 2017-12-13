@@ -62,10 +62,6 @@ var modelDefinition = {
 // 3: Define the User model.
 var HewanModel = db.define('hewan', modelDefinition );
 
-// //association
-// HewanModel.belongsToMany(UserModel, {
-//     through: 'mengelola_ternak',
-//     foreignKey: 'id_user'
-// });
+
 
 module.exports = HewanModel;

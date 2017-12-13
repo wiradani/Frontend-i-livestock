@@ -85,16 +85,27 @@ function hashPassword(user) {
 
 
 
-// //assosiaction
-// UserModel.BelongsToMany(PakanModel, {
-//     through: 'mengelola_pakan',
-//     foreignKey: 'id_user'
-// });
+//assosiaction
+UserModel.belongsToMany(PakanModel, {
+    through: 'mengelola_pakan',
+    foreignKey: 'id_user'
+});
 
-// UserModel.BelongsToMany(HewanModel, {
-//     through: 'mengelola_ternak',
-//     foreignKey: 'id_user'
-// });
+PakanModel.belongsToMany(UserModel, {
+    through: 'mengelola_pakan',
+    foreignKey: 'id_pakan'
+});
+
+UserModel.belongsToMany(HewanModel, {
+    through: 'mengelola_ternak',
+    foreignKey: 'id_user'
+});
+
+HewanModel.belongsToMany(UserModel, {
+    through: 'mengelola_ternak',
+    foreignKey: 'id_hewan'
+});
+
 
 
 module.exports = UserModel;
