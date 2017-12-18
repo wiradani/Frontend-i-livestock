@@ -18,15 +18,15 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr *ngFor="let post of haha">
-                            <th scope="row"></th>
+                        <tr *ngFor="let post of haha;let i = index">
+                            <td>{{i+1}}</td>
                             <td>{{post?.nomor_eartag}}</td>
                             <td>{{post?.tanggal_lahir}}</td>
                             <td>{{post?.jenis_hewan}}</td>
                             <td>{{post?.berat_badan}}</td>
                             <td>{{post?.kesehatan_hewan}}</td>
                             <td><button type="tambah" class="btn btn-success" (click)="edit()"><i class="fa fa-fw fa-edit"></i> Edit</button>
-                            <button type="reset" class="btn btn-danger" (click)="delete()"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                            <button type="reset" class="btn btn-danger" (click)="delete(post?.id)"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
                             </td>
                         </tr>
 

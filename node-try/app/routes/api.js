@@ -26,7 +26,7 @@ var APIRoutes = function(passport) {
     // GET Routes.
     router.get('/profile', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.user, UserController.index));
     router.get('/admin', passport.authenticate('jwt', { session: false }), allowOnly(config.accessLevels.admin, AdminController.index));
-    
+
     router.get('/hewan', HewanController.listHewan);
     router.get('/sapi', HewanController.listSapi);
     router.get('/kambing', HewanController.listKambing);
@@ -34,16 +34,11 @@ var APIRoutes = function(passport) {
     router.get('/countsapi', HewanController.countSapi);
     router.get('/countkambing', HewanController.countKambing);
     router.get('/countdomba', HewanController.countDomba);
-    router.get('/kurbansapi', HewanController.kurbanSapi);
-    router.get('/kurbankambing', HewanController.kurbanKambing);
-    router.get('/kurbandomba', HewanController.kurbanDomba);
 
-    
+
     router.get('/pakan', PakanController.listPakan);
     router.get('/rumput', PakanController.listKonsentrat);
     router.get('/konsentrat', PakanController.listRumput);
-    router.get('/countrumput', PakanController.countKonsentrat);
-    router.get('/countkonsentrat', PakanController.countRumput);
     return router;
 };
 
