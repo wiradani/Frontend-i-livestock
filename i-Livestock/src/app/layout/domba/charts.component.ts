@@ -16,6 +16,7 @@ export class ChartsComponent implements OnInit {
   response: any = [];
   haha:any;
   DATA_END_POINT = 'http://localhost:8087/api/domba';
+  DATA_DELETE = 'http://localhost:8087/api/deleteHewan';
 
 
 
@@ -32,10 +33,31 @@ export class ChartsComponent implements OnInit {
         console.log(this.haha);
     });
   }
+  getid(){
 
+  }
     ngOnInit() {
 
     }
+  delete(){
+    this.haha.id = this.data.get('id').value;
+    console.log('id');
+    let tmp =this.haha.id
+    this.http.post(this.DATA_DELETE,tmp)
+    .subscribe(param =>{
+              this.response = param.json();
+              console.log(this.response);
 
+              if(this.response.success == true){
+                console.log("good job ")
+              }
+
+          },
+          err =>{
+              console.log("errorr")
+            //  this.progressService.done();
+              console.log(err);
+          });
+  }
 
 }

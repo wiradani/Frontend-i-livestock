@@ -9,7 +9,7 @@
                         <thead class="thead-inverse">
                         <tr>
                             <th>#</th>
-                            <th>ID</th>
+                            <th>Eartag</th>
                             <th>Usia (bln)</th>
                             <th>Jenis</th>
                             <th>Bobot (kg)</th>
@@ -25,9 +25,9 @@
                             <td>{{post?.jenis_hewan}}</td>
                             <td>{{post?.berat_badan}}</td>
                             <td>{{post?.kesehatan_hewan}}</td>
-                            <td><a class="btn btn-sq-lg btn-success" href="#">
-  <i class="fa fa-fw fa-edit"></i> Edit</a> <a class="btn btn-danger" href="#">
-  <i class="fa fa-trash-o fa-lg"></i> Delete</a></td>
+                            <td><button type="tambah" class="btn btn-success" (click)="edit()"><i class="fa fa-fw fa-edit"></i> Edit</button>
+                            <button type="reset" class="btn btn-danger" (click)="delete()"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                            </td>
                         </tr>
 
                         </tbody>

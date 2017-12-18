@@ -25,7 +25,7 @@ export class ChartsComponent implements OnInit {
 
     // Pie
     public pieChartLabels: string[] = ['Sapi', 'Kambing', 'Domba'];
-    public pieChartData: number[] =[] ;//ini diganti data
+    public pieChartData: number[] =[1,5,10] ;//ini diganti data
     public pieChartType: string = 'pie';
 
 
