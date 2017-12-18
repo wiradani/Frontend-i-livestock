@@ -57,5 +57,8 @@ export class ChartsComponent implements OnInit {
               console.log(err);
           });
   }
+  edit(){
+    this.router.navigate(['/edit_hewan']);
+  }
 
 }

@@ -25,7 +25,7 @@ export class ChartsComponent implements OnInit {
 
     // Pie
     public pieChartLabels: string[] = ['Sapi', 'Kambing', 'Domba'];
-    public pieChartData: number[] =[1,5,10] ;//ini diganti data
+    public pieChartData: number[] =[10,10,10] ;//ini diganti data
     public pieChartType: string = 'pie';
 
 
@@ -70,21 +70,23 @@ export class ChartsComponent implements OnInit {
       this.http.get(this.DATA_KAMBING)
       .map(res => res.json())
       .subscribe(data => {
-      //this.kambing=data;
-      this.countall.push(data);
-      });
-      this.http.get(this.DATA_SAPI)
-      .map(res => res.json())
-      .subscribe(data1 => {
-        this.countall.push(data1);
-      });
-      this.http.get(this.DATA_DOMBA)
-      .map(res => res.json())
-      .subscribe(data2 => {
-        this.countall.push(data2);
+      this.pieChartData[1]=data;
+      //this.countall.push(data);
       });
 
-      var pieChartData = this.countall;
+      this.http.get(this.DATA_DOMBA)
+      .map(res => res.json())
+      .subscribe(data => {
+      this.pieChartData[2]=data;
+      //this.countall.push(data);
+      });
+
+      this.http.get(this.DATA_SAPI)
+      .map(res => res.json())
+      .subscribe(data => {
+      this.pieChartData[0]=data;
+      //this.countall.push(data);
+      });
 
     }
 

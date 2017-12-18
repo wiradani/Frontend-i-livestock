@@ -1,0 +1,91 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Edit Hewan'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-6">
+
+            <form [formGroup]="form">
+
+              <fieldset class="form-group">
+                <div class="form-group">
+                  <label for="role">Jenis Hewan</label>
+                  <select
+                      #jenisHewan
+                      formControlName="jenis_hewan"
+                      ng-model="jenis_hewan"
+                      id="jenis_hewan"
+                      placeholder="jenis_hewan"
+                      class="form-control">
+                          <option>Sapi</option>
+                          <option>Kambing</option>
+                          <<option>Domba</option>
+                  </select>
+              </div>
+
+                      </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Nomor Eartag</label>
+		              <input
+                  #nomorEartag
+                  formControlName="nomor_eartag"
+                  ng-model="nomor_eartag"
+                  type="number"
+                  id="nomor_eartag"
+                  placeholder="Nomor Eartag"
+                  min=0
+                  class="form-control"
+                  >
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Spesies </label>
+		              <input
+                  #spesies
+                  class="form-control"
+                  formControlName="spesies_hewan"
+                  ng-model="spesies_hewan"
+                  type="text"
+                  id="spesies_hewan"
+                  placeholder="spesies"
+                  >
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Usia (bulan) </label>
+		              <input
+                  #usia
+                  class="form-control"
+                  formControlName="tanggal_lahir"
+                  ng-model="tanggal_lahir"
+                  type="number"
+                  id="tanggal_lahir"
+                  placeholder="Usia"
+                  min=0
+                  >
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Bobot (Kg) </label>
+		              <input
+                  #beratBadan
+                  class="form-control"
+                  formControlName="berat_badan"
+                  ng-model="berat_badan"
+                  type="number"
+                  id="berat_badan"
+                  placeholder="Bobot"
+                  min=0
+                  >
+                </fieldset>
+
+
+
+            </form>
+            <button type="edit" class="btn btn-primary" (click)="editHewan()">Edit</button>
+            <button type="reset" class="btn btn-danger" (click)="reset()">Reset</button>
+
+        </div>
+
+    <!-- /.row -->
+</div>
