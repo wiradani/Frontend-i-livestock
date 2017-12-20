@@ -38,8 +38,10 @@ var APIRoutes = function(passport) {
 
 
     router.get('/pakan', PakanController.listPakan);
-    router.get('/rumput', PakanController.listKonsentrat);
-    router.get('/konsentrat', PakanController.listRumput);
+    router.get('/konsentrat', PakanController.listKonsentrat);
+    router.get('/rumput', PakanController.listRumput);
+    router.get('/countrumput', PakanController.countRumput);
+    router.get('/countkonsentrat', PakanController.countKonsentrat);
     return router;
 };
 
