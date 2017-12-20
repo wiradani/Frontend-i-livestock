@@ -9,9 +9,7 @@ var HewanController = {};
 
 var Sequelize = require('sequelize');
 const Op = Sequelize.Op
-const operatorsAliases = {
-  $gte: Op.gte
-}
+
 
 //create hewan
 HewanController.createHewan = function(req, res) {
@@ -151,16 +149,16 @@ HewanController.countDomba =async function(req, res) {
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
 
-HewanController.kurbanme =async function(req, res) {
+// HewanController.kurbanme =async function(req, res) {
 
-            Hewan.findAll({
-              where: {
-                tanggal_lahir: {$gte: 12}
-            }
-            })
-            .then(function(kurbanme){res.status(200).json(kurbanme)})
-            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
-        }
+//             Hewan.findAll({
+//               where: {
+//                 [Op.gte]: {tanggal_lahir: 12}
+//             }
+//             })
+//             .then(function(kurbanme){res.status(200).json(kurbanme)})
+//             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+//         }
 
 
 
