@@ -156,7 +156,7 @@ HewanController.kurbanme =async function(req, res) {
                 [Op.gte]: {tanggal_lahir: 12}
             }
             })
-            .then(function(countdomba){res.status(200).json(countdomba)})
+            .then(function(kurbanme){res.status(200).json(kurbanme)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
 
