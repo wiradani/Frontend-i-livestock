@@ -7,6 +7,10 @@ var Hewan = require('../models/hewan'),
 // The user controller.
 var HewanController = {};
 
+var Sequelize = require('sequelize');
+const Op = Sequelize.Op
+
+
 //create hewan
 HewanController.createHewan = function(req, res) {
 
@@ -144,5 +148,18 @@ HewanController.countDomba =async function(req, res) {
             .then(function(countdomba){res.status(200).json(countdomba)})
             .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
         }
+
+HewanController.kurbanme =async function(req, res) {
+
+            Hewan.count({
+              where: {
+                [Op.gte]: {tanggal_lahir: 12}
+            }
+            })
+            .then(function(countdomba){res.status(200).json(countdomba)})
+            .catch(function(error){console.log(error);res.status(500).json({ message: 'There was an error!' })})
+        }
+
+
 
 module.exports = HewanController;
