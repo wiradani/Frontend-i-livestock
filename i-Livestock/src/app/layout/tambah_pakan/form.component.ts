@@ -59,7 +59,7 @@ export class FormComponent implements OnInit {
    }
 
    addPakan(){
-     this.data.jenis_pakan = this.form.get('jenis_pakan').value;
+      this.data.jenis_pakan = this.form.get('jenis_pakan').value;
       this.data.nama_pakan = this.form.get('nama_pakan').value;
       this.data.jumlah_pakan = this.form.get('jumlah_pakan').value;
       this.data.kandungan = this.form.get('kandungan').value;
@@ -77,10 +77,7 @@ export class FormComponent implements OnInit {
 
                 if(this.response.success == true){
                   console.log("good job ")
-                  this.form.get('jenis_pakan').setValue("");
-                  this.form.get('nama_pakan').setValue("");
-                  this.form.get('jumlah_pakan').setValue("");
-                  this.form.get('kandungan').setValue("");
+                    location.reload();
                 }
 
             },

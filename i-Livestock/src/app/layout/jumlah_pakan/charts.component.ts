@@ -15,9 +15,8 @@ export class ChartsComponent implements OnInit {
   data: any ;
   response: any = [];
   countall:any=[];
-  sapi:number;
-  kambing:any;
-  domba:number;
+  rumput:any;
+  konsetrat:any;
 
   DATA_RUMPUT = 'http://localhost:8087/api/rumput';
   DATA_KONSETRAT = 'http://localhost:8087/api/konsentrat';
@@ -86,7 +85,7 @@ export class ChartsComponent implements OnInit {
 
     ngOnInit() {
 
-        this.pieChartData.push(this.kambing,this.sapi,this.domba);
+        this.pieChartData.push(this.rumput,this.konsetrat);
 
     }
 }

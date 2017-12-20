@@ -78,6 +78,7 @@ import 'rxjs/add/operator/map'
         this.data.berat_badan = this.form.get('berat_badan').value;
         this.data.kesehatan_hewan = this.form.get('kesehatan_hewan').value;
 
+
        console.log("masuk")
         this.http.post(this.DATA_END_POINT,this.data)
         .subscribe(param =>{
@@ -87,18 +88,13 @@ import 'rxjs/add/operator/map'
                   this.loader = true;
 
                   if(this.response.success == true){
-                    console.log("good job ")
-                    this.form.get('nomor_eartag').setValue("");
-                    this.form.get('jenis_hewan').setValue("");
-                    this.form.get('spesies_hewan').setValue("");
-                    this.form.get('tanggal_lahir').setValue("");
-                    this.form.get('berat_badan').setValue("");
-                    this.form.get('kesehatan_hewan').setValue("");
+                    console.log("Data Berhasil Ditambahkan")
+                    location.reload();
                   }
 
               },
               err =>{
-                  console.log("errorr")
+                  console.log("Error")
                 //  this.progressService.done();
                   console.log(err);
               });
