@@ -24,8 +24,8 @@
                         <td>{{post?.tanggal_lahir}}</td>
                         <td>{{post?.berat_badan}}</td>
                         <td>{{post?.kesehatan_hewan}}</td>
-                        <td><button type="edit" class="btn btn-success" (click)="edit()"><i class="fa fa-fw fa-edit"></i> Edit</button>
-                        <button type="reset" class="btn btn-danger" (click)="delete(post?.id)"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
+                        <td><button type="edit" class="btn btn-success" (click)="edit(post?.id)"><i class="fa fa-fw fa-edit"></i> Edit</button>
+                        <button type="reset" class="btn btn-danger" (click)="delete(post?.id,post?.nomor_eartag,post?.spesies_hewan,post.tanggal_lahir,post?.berat_badan,post?.kesehatan_hewan)"><i class="fa fa-trash-o fa-lg"></i> Delete</button>
                         </td>
                     </tr>
 

@@ -6,26 +6,10 @@
 
             <form [formGroup]="form">
 
-              <fieldset class="form-group">
-                <div class="form-group">
-                  <label for="role">Jenis Hewan</label>
-                  <select
-                      #jenisHewan
-                      formControlName="jenis_hewan"
-                      ng-model="jenis_hewan"
-                      id="jenis_hewan"
-                      placeholder="jenis_hewan"
-                      class="form-control">
-                          <option>Sapi</option>
-                          <option>Kambing</option>
-                          <<option>Domba</option>
-                  </select>
-              </div>
-
-                      </fieldset>
 
                 <fieldset class="form-group">
                     <label>Nomor Eartag</label>
+                  <div>{{nomor_eartag}}</div>
 		              <input
                   #nomorEartag
                   formControlName="nomor_eartag"
@@ -78,6 +62,7 @@
                   min=0
                   >
                 </fieldset>
+
 
 
 

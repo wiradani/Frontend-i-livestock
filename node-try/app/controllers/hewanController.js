@@ -63,15 +63,15 @@ HewanController.updateHewan = function(req, res) {
     db.sync().then(function() {
       Hewan.update({
         	nomor_eartag: req.body.nomor_eartag,
-            jenis_hewan: req.body.jenis_hewan,
-            spesies_hewan: req.body.spesies_hewan,
+            //jenis_hewan: req.body.jenis_hewan,
+            //spesies_hewan: req.body.spesies_hewan,
             tanggal_lahir: req.body.tanggal_lahir,
             berat_badan: req.body.berat_badan,
-            kesehatan_hewan: req.body.kesehatan_hewan,
-            status_kurban: req.body.status_kurban,
-            kandang: req.body.kandang,
-            induk_jantan: req.body.induk_jantan,
-            induk_betina: req.body.induk_betina
+            //kesehatan_hewan: req.body.kesehatan_hewan,
+            //status_kurban: req.body.status_kurban,
+            //kandang: req.body.kandang,
+            //induk_jantan: req.body.induk_jantan,
+            //induk_betina: req.body.induk_betina
           }, {
             where: {
               id:req.body.id

@@ -13,9 +13,8 @@ export class DashboardComponent implements OnInit {
   data: any ;
   response: any = [];
   haha:any;
-  DATA_END_POINT = 'http://localhost:8087/api/kurbansapi';
-  DATA_END_POINT1 = 'http://localhost:8087/api/kurbankambing';
-  DATA_END_POINT2 = 'http://localhost:8087/api/kurbandomba';
+  DATA_END_POINT = 'http://localhost:8087/api/sapi';
+
 
 
 
@@ -32,22 +31,7 @@ export class DashboardComponent implements OnInit {
         console.log(data.count);
         console.log(this.haha);
     });
-    this.http.get(this.DATA_END_POINT1)
-    .map(res => res.json())
-    .subscribe(data => {
-        this.data = data;
-        this.haha= data.rows;
-        console.log(data.count);
-        console.log(this.haha);
-    });
-    this.http.get(this.DATA_END_POINT2)
-    .map(res => res.json())
-    .subscribe(data => {
-        this.data = data;
-        this.haha= data.rows;
-        console.log(data.count);
-        console.log(this.haha);
-    });
+
   }
 
     ngOnInit() {

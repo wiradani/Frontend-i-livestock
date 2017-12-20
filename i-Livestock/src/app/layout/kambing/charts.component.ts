@@ -57,7 +57,13 @@ export class ChartsComponent implements OnInit {
               console.log(err);
           });
   }
-  edit(){
+  edit(id,nomor_eartag,spesies,usia,bobot,status){
+    localStorage.setItem('id', id);
+    localStorage.setItem('nomor_eartag', nomor_eartag);
+    localStorage.setItem('spesies', spesies);
+    localStorage.setItem('usia', usia);
+    localStorage.setItem('bobot', bobot);
+    localStorage.setItem('status', status);
     this.router.navigate(['/edit_hewan']);
   }
 

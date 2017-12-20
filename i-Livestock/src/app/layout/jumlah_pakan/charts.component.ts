@@ -15,15 +15,16 @@ export class ChartsComponent implements OnInit {
   data: any ;
   response: any = [];
   countall:any=[];
-  rumput:any;
-  konsetrat:any;
+  rumput:number;
+  konsentrat:any;
+  domba:number;
 
-  DATA_RUMPUT = 'http://localhost:8087/api/rumput';
-  DATA_KONSETRAT = 'http://localhost:8087/api/konsentrat';
+  DATA_RUMPUT = 'http://localhost:8087/api/countrumput';
+  DATA_KONSETRAT= 'http://localhost:8087/api/countkonsentrat';
 
 
     // Pie
-    public pieChartLabels: string[] = ['Rumput', 'Konsentrat'];
+    public pieChartLabels: string[] = ['Rumput', 'konsentrat'];
     public pieChartData: number[] =[10,10] ;//ini diganti data
     public pieChartType: string = 'pie';
 
@@ -69,15 +70,14 @@ export class ChartsComponent implements OnInit {
       this.http.get(this.DATA_RUMPUT)
       .map(res => res.json())
       .subscribe(data => {
-      this.pieChartData[0]=data;
-      //this.countall.push(data);
+      this.pieChartData[1]=data;
+
       });
 
       this.http.get(this.DATA_KONSETRAT)
       .map(res => res.json())
       .subscribe(data => {
-      this.pieChartData[1]=data;
-      //this.countall.push(data);
+      this.pieChartData[2]=data;
       });
 
 
@@ -85,7 +85,7 @@ export class ChartsComponent implements OnInit {
 
     ngOnInit() {
 
-        this.pieChartData.push(this.rumput,this.konsetrat);
+        this.pieChartData.push(this.rumput,this.konsentrat);
 
     }
 }
