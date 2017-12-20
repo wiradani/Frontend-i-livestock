@@ -1,22 +1,24 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Tambah Pakan'" [icon]="'fa-edit'"></app-page-header>
-
+    
     <div class="row">
         <div class="col-lg-6">
 
             <form [formGroup]="form">
 
-		      <fieldset class="form-group">
+          <fieldset class="form-group">
                     <label>Nama Pakan</label>
                     <input
                         #namaPakan
                         formControlName="nama_pakan"
                         ng-model="nama_pakan"
+                        ng-required="true"
                         type="text"
                         id="nama_pakan"
                         placeholder="Nama Pakan"
+                        class="form-control"
                         >
-                </fieldset>
+          </fieldset>
 
                 <fieldset class="form-group">
                   <div class="form-group">
@@ -25,40 +27,44 @@
                         #role
                         formControlName="jenis_pakan"
                         ng-model="jenis_pakan"
+                        ng-required="true"
                         id="jenis_pakan"
-                        placeholder="Jenis pakan"
+                        placeholder="Jenis Pakan"
                         class="form-control">
-                            <option>rumput</option>
-                            <option>konsentrat</option>
+                            <option>Rumput</option>
+                            <option>Konsentrat</option>
                     </select>
+        
                 </div>
-
                         </fieldset>
 
                 <fieldset class="form-group">
                     <label>Jumlah Pakan (kg)</label>
-		              <input
+                  <input
                   #jumlahPakan
                   formControlName="jumlah_pakan"
                   ng-model="jumlah_pakan"
+                  ng-required="true"
                   type="number"
                   id="jumlah_pakan"
-                  placeholder="jumlah_pakan"
+                  placeholder="Jumlah Pakan"
                   min=0
                   class="form-control"
                   >
+                  
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label>Kandungan</label>
-		              <input
+                  <input
                   #kandungan
                   class="form-control"
                   formControlName="kandungan"
                   ng-model="kandungan"
+                  ng-required="true"
                   type="text"
                   id="kandungan"
-                  placeholder="kandungan"
+                  placeholder="Kandungan"
                   >
                 </fieldset>
 

@@ -1,0 +1,17 @@
+<div [@routerTransition]>
+    <h2 class="text-muted">Dashboard</h2>
+    <div class="row">
+        <div class="col col-sm-10">
+            <div class="card mb-4">
+                <div class="card-header">
+                    Grafik Hewan Qurban
+                </div>
+                <div class="card-body">
+                    <canvas baseChart height="150" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

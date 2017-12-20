@@ -6,7 +6,8 @@ const routes: Routes = [
     {
         path: '', component: LayoutComponent,
         children: [
-	    { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+	    //{ path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+            { path: 'dash_qurban', loadChildren: './dash_qurban/charts.module#ChartsModule' },
             { path: 'qurban_me', loadChildren: './qurban_me/dashboard.module#DashboardModule' },
             { path: 'jumlah_hewan', loadChildren: './jumlah_hewan/charts.module#ChartsModule' },
 	        { path: 'jumlah_pakan', loadChildren: './jumlah_pakan/charts.module#ChartsModule' },

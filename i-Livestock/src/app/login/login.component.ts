@@ -70,7 +70,7 @@ export class LoginComponent implements OnInit {
                     localStorage.setItem('userID',this.dataDecode.id_user);
                     localStorage.setItem('role',this.response.role);//role dalam bentuk angka:string
                     // console.log(localStorage.getItem('role'));
-                    this.router.navigate(['/dashboard']);
+                    this.router.navigate(['/dash_qurban']);
                   // this.progressService.done();
                 }
 

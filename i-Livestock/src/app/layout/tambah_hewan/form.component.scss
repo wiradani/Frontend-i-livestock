@@ -1,3 +1,8 @@
 input[type="radio"]{
   margin-left: 10px;
 }
+
+
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched{
+	border: 2px solid red;
+}

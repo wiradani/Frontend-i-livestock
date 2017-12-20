@@ -1,6 +1,11 @@
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
+        <!--
         <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
+        </a>
+    -->
+        <a [routerLink]="['/dash_qurban']" [routerLinkActive]="['router-link-active']" class="list-group-item">
             <i class="fa fa-dashboard"></i>&nbsp;{{ 'Dashboard' | translate }}
         </a>
 	<a [routerLink]="['/qurban_me']" [routerLinkActive]="['router-link-active']" class="list-group-item">

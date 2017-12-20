@@ -13,9 +13,11 @@
                       #jenisHewan
                       formControlName="jenis_hewan"
                       ng-model="jenis_hewan"
+                      ng-required="true"
                       id="jenis_hewan"
                       placeholder="jenis_hewan"
                       class="form-control">
+
                           <option>Sapi</option>
                           <option>Kambing</option>
                           <<option>Domba</option>
@@ -30,6 +32,7 @@
                   #nomorEartag
                   formControlName="nomor_eartag"
                   ng-model="nomor_eartag"
+                  ng-required="true"
                   type="number"
                   id="nomor_eartag"
                   placeholder="Nomor Eartag"
@@ -45,9 +48,10 @@
                   class="form-control"
                   formControlName="spesies_hewan"
                   ng-model="spesies_hewan"
+                  ng-required="true"
                   type="text"
                   id="spesies_hewan"
-                  placeholder="spesies"
+                  placeholder="Spesies"
                   >
                 </fieldset>
 
@@ -58,6 +62,7 @@
                   class="form-control"
                   formControlName="tanggal_lahir"
                   ng-model="tanggal_lahir"
+                  ng-required="true"
                   type="number"
                   id="tanggal_lahir"
                   placeholder="Usia"
@@ -72,6 +77,7 @@
                   class="form-control"
                   formControlName="berat_badan"
                   ng-model="berat_badan"
+                  ng-required="true"
                   type="number"
                   id="berat_badan"
                   placeholder="Bobot"
@@ -79,7 +85,23 @@
                   >
                 </fieldset>
 
+              <fieldset class="form-group">
+                <div class="form-group">
+                  <label for="role">Status</label>
+                  <select
+                      #kesehatanHewan
+                      formControlName="kesehatan_hewan"
+                      ng-model="kesehatan_hewan"
+                      ng-required="true"
+                      id="kesehatan_hewan"
+                      placeholder="kesehatan_hewan"
+                      class="form-control">
+                          <option>Sehat</option>
+                          <option>Sakit</option>
+                  </select>
+                </div>
 
+                      </fieldset>
 
             </form>
             <button type="tambah" class="btn btn-primary" (click)="addHewan()">Tambah</button>

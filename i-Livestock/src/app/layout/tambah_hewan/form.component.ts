@@ -17,7 +17,8 @@ import 'rxjs/add/operator/map'
           "jenis_hewan": "",
           "spesies_hewan": "",
           "tanggal_lahir": "",
-          "berat_badan": ""
+          "berat_badan": "",
+          "kesehatan_hewan": ""
     };
     response: any = [];
     loader = false;
@@ -31,7 +32,8 @@ import 'rxjs/add/operator/map'
       jenis_hewan: new FormControl('', Validators.required),
       spesies_hewan: new FormControl('', Validators.required),
       tanggal_lahir: new FormControl('',Validators.required),
-      berat_badan: new FormControl('',Validators.required)
+      berat_badan: new FormControl('',Validators.required),
+      kesehatan_hewan: new FormControl('',Validators.required)
       });
 
       constructor(
@@ -64,12 +66,17 @@ import 'rxjs/add/operator/map'
          return this.form.get('berat_badan');
      }
 
+     get kesehatanHewan() {
+         return this.form.get('kesehatan_hewan');
+     }
+
      addHewan(){
         this.data.nomor_eartag = this.form.get('nomor_eartag').value;
         this.data.jenis_hewan = this.form.get('jenis_hewan').value;
         this.data.spesies_hewan = this.form.get('spesies_hewan').value;
         this.data.tanggal_lahir = this.form.get('tanggal_lahir').value;
         this.data.berat_badan = this.form.get('berat_badan').value;
+        this.data.kesehatan_hewan = this.form.get('kesehatan_hewan').value;
 
        console.log("masuk")
         this.http.post(this.DATA_END_POINT,this.data)
@@ -86,6 +93,7 @@ import 'rxjs/add/operator/map'
                     this.form.get('spesies_hewan').setValue("");
                     this.form.get('tanggal_lahir').setValue("");
                     this.form.get('berat_badan').setValue("");
+                    this.form.get('kesehatan_hewan').setValue("");
                   }
 
               },
@@ -101,6 +109,7 @@ import 'rxjs/add/operator/map'
         this.form.get('spesies_hewan').setValue("");
         this.form.get('tanggal_lahir').setValue("");
         this.form.get('berat_badan').setValue("");
+        this.form.get('kesehatan_hewan').setValue("");
 
       }
 
