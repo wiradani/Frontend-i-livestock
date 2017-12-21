@@ -6,3 +6,16 @@ input[type="radio"]{
 input.ng-invalid.ng-touched, select.ng-invalid.ng-touched{
 	border: 2px solid red;
 }
+
+.white_content {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: 35%;
+  height: 9%;
+  padding: 6px;
+  background-color: #222;
+  z-index: 102;
+  overflow: auto;
+}

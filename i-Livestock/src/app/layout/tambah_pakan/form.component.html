@@ -69,10 +69,12 @@
                 </fieldset>
 
             </form>
-            <button type="tambah" class="btn btn-primary" (click)="addPakan()">Tambah</button>
+            <button type="tambah" class="btn btn-primary" (click)="addPakan()" href="javascript:void(0)"><a  onclick="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">Tambah</a></button>
             <button type="reset" class="btn btn-danger" (click)="reset()">Reset</button>
 
         </div>
-
+        
+        <div id="light" class="white_content"><h3 align="center"><font color="white">Tambah Pakan Sukses</font></h3>
+        </div>
     <!-- /.row -->
 </div>
