@@ -27,6 +27,18 @@ This project to complete our assigment for Software Enginering
 
 7. git push origin master' masukan ke git di web/atau origin "branch"
 
-# Penting lagi
-buat branch untuk mencegah konflik
-jangan upload ke master kalau belum final
+# Menjalankan Frontend angular
+
+1. masuk folder i-livestock
+
+2. 'npm install'
+
+3. 'ng serve'
+
+# Menjalankan backend
+
+1. masuk folder node-try
+
+2. 'npm install'
+
+3. 'node app/server.js'
